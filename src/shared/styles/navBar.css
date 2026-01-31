@@ -6,6 +6,32 @@
     height: 60px;
 }
 
+@media only screen and (max-width: 600px) {
+    .navBar {
+        flex-direction: column;
+        height: 80px;
+    }
+
+    .iconDiv {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    ul {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+       
+    }
+
+    .languageDropdown {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .iconDiv {
     display: flex;
     flex-direction: row;
