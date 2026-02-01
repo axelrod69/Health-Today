@@ -1,0 +1,11 @@
+.shapeDiv {
+    position: absolute;
+    height: 580px;
+    width: 600px;
+    border-radius: 50%;
+    background-color: rgba(125, 71, 245, 0.4);
+    top: 10%;
+    right: 5%;
+    /* Use top, right, bottom, left to position it */
+    /* Example: top: 50px; left: 100px; */
+}
