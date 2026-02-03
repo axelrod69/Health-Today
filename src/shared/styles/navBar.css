@@ -90,6 +90,15 @@ li:hover {
     cursor: pointer;
 }
 
+.dropDownContent::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* Creates invisible bridge above dropdown */
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+
 .dropDownContent ul {
     display: flex;
     flex-direction: column;

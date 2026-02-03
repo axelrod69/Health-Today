@@ -1,0 +1,30 @@
+.nameCard {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 270px;
+    height: 110px;
+    border-radius: 10px;
+    background-color: rgba(125, 71, 245, 0.6);
+    top: 70%;
+    left: 45%;
+    padding: 10px;
+}
+
+.nameCardSecond {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex: 1;
+}
+
+p {
+    color: white;
+    text-align: start;
+    font-size: 15px;
+}
+
+.nameCardSecond p, .nameCardSecond h4 {
+    margin: 0;
+}

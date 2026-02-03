@@ -1,9 +1,11 @@
 import '../styles/shape.css'
 
-function Shape() {
+function Shape({ style }) {
     return (
         <>
-            <div className='shapeDiv'></div>
+            <div className='shapeDiv'
+                style={style}
+            ></div>
         </>
     );
 }

@@ -1,5 +1,6 @@
 import '../styles/home.css'
 import Button from './Button'
+import NameCard from './NameCard';
 import Shape from './Shape'
 
 function Home() {
@@ -17,8 +18,16 @@ function Home() {
                     </div>
                 </div>
                 <div className="secondSection">
+                    <NameCard />
                 </div>
-                <Shape />
+                <Shape style={{
+                    position: 'absolute',
+                    height: '580px',
+                    width: '600px',
+                    backgroundColor: 'rgba(125, 71, 245, 0.4)',
+                    top: '10%',
+                    right: '5%'
+                }} />
             </div>
         </>
     );
