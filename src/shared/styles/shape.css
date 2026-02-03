@@ -1,3 +1,4 @@
 .shapeDiv {
     border-radius: 50%;
+    z-index: 1; /* Keep shape below NavBar and dropdown */
 }
