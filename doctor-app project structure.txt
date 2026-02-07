@@ -1,0 +1,29 @@
+src
+|
+|-- app
+|    |-- App.jsx
+|-- assets
+|    |-- fonts
+|    |-- icons
+|    |-- images
+|    |-- shared
+|    |    |-- icons
+|    |-- styles
+|         |-- global.css
+|
+|-- core
+|    |-- localization
+|    |-- theme
+|
+|-- features
+|    |-- screens
+|    |     |-- FirstScreen.jsx          
+|    |-- shared
+|    |-- styles
+|         |-- firstScreen.css
+|
+|-- shared
+|    |-- components
+|    |    |-- Button.jsx, Home.jsx, NameCard.jsx, NavBar.jsx, Shape.jsx
+|    |-- styles
+|         |-- button.css, home.css, nameCard.css, navBar.css, shape.css

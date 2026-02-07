@@ -17,7 +17,7 @@
    height: 100%;
    flex-basis: 65%;
    flex-shrink: 0;
-   /* background-color: red; */
+   /* background-color: greenyellow; */
 }
 
 .secondSection {
@@ -25,12 +25,13 @@
    flex-basis: 35%;
    flex-shrink: 0;
    position: relative;
+   /* background-color: pink; */
 }
 
 .textBlock {
    width: 70%;
    text-align: left;
-   background-color: red;
+   /* background-color: red; */
 }
 
 h1 {
@@ -58,14 +59,18 @@ p {
 
 @media only screen and (max-width: 600px) {
    .home {
+      display: flex;
+      flex-direction: column;
       margin-top: 70px;
-      height: 800px;
+      height: 1000px;
+      /* background-color: red; */
    }
 
    .textBlock {
-      width: 70%;
-      text-align: left;
-      background-color: green;
+      width: 100%;
+      margin-top: 100px;
+      text-align: center;
+      /* background-color: green; */
    }
 
    .textBlock h1 {
@@ -74,14 +79,23 @@ p {
    }
 
    .textBlock p {
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
       font-weight: 500;
+      text-align: center;
+      width: 100%;
+      
    }
 
    .buttonBloc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
-      background-color: yellow;
    }
 
+   
    /* .firstSection {
       display: flex;
       justify-content: end;
