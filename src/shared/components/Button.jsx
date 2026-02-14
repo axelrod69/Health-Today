@@ -1,9 +1,9 @@
 import '../styles/button.css'
 
-function Button({ icon, label, functionality }) {
+function Button({ icon, label, functionality, variant }) {
     return (
         <>
-            <button className="buttonClass" onClick={functionality}>{icon ? (<div>
+            <button className={`buttonClass ${variant}`} onClick={functionality}>{icon ? (<div>
                 <span>{icon}</span>
                 <span>{label}</span>
             </div>) : (<span>{label}</span>)}</button>

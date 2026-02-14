@@ -14,8 +14,8 @@ function Home() {
                 <p>The health and well-being of our patients will always be our priority. We follow the best practices for cleanliness</p>
             </div>
             <div className='buttonBloc'>
-                <Button label="View our services" />
-                <Button label="Emergency" />
+                <Button label="View our services" variant="primary"/>
+                <Button label="Emergency"  variant="primary"/>
             </div>
         </>
     )

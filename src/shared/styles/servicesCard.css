@@ -1,0 +1,27 @@
+.serviceCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(186, 153, 247, 0.85);
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
+    padding: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.serviceCard:hover {
+    transform: scale(1.05);
+    background-color: rgba(186, 153, 247, 1);
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #2D3748;
+}
