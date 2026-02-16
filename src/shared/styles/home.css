@@ -63,13 +63,13 @@ h1 {
       display: flex;
       flex-direction: column;
       margin-top: 70px;
-      height: 1200px;
+      height: 1080px;
       /* background-color: red; */
    }
 
    .textBlock {
       width: 100%;
-      margin-top: 100px;
+      margin-top: 8px;
       text-align: center;
       /* background-color: green; */
    }

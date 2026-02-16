@@ -1,8 +1,11 @@
 import '../styles/speciality.css'
 import ServicesCard from './ServicesCard'
 import Button from './Button';
+import useIsMobile from '../hooks/useIsMobile';
 
 function Speciality() {
+    const isMobile = useIsMobile()
+
     return (
         <>
             <div className="specialityDiv">
@@ -29,7 +32,6 @@ function Speciality() {
                         </div>
                         <div className='buttonSection'>
                             <Button label="More About Us" variant="outline"/>
-
                         </div>
                     </div>
                 </div>

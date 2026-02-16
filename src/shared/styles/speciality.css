@@ -111,17 +111,23 @@ h2 {
 .buttonSection {
     width: 50%;
     height: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 @media only screen and (max-width: 600px) {
     .specialityDiv {
         padding-left: 20px;
         padding-right: 20px;
+        /* background-color: red; */
     }
 
     .headerText {
-        padding-left: 20px;
-        padding-right: 20px;
+        margin-top: 50px;
+        /* background-color: yellow; */
+    }
+
+    .headerText h2 {
+        font-size: 30px;
+
     }
 }
