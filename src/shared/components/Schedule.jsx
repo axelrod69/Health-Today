@@ -1,5 +1,5 @@
 import '../styles/schedule.css'
-import Shape from './Shape';
+import AddressCard from './AddressCard';
 import Calender from './Calender';
 
 function Schedule() {
@@ -7,14 +7,9 @@ function Schedule() {
         <>
             <div className='scheduleDiv'>
                 <div className='firstScheduleDiv'>
-                    <Shape style={{
-                        // position: 'absolute',
-                        height: '480px',
-                        width: '480px',
-                        backgroundColor: 'rgba(125, 71, 245, 0.4)',
-                        top: '10%',
-                        right: '5%'
-                    }} />
+                    <AddressCard />
+                    <AddressCard />
+                    <AddressCard />
                 </div>
                 <div className='secondScheduleDiv'>
                     <p>A great system application for hospital center & health care</p>

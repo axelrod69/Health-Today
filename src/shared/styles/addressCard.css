@@ -1,0 +1,62 @@
+
+.addressCard {
+    display: flex;
+    position: relative;
+    width: 70%;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(186, 153, 247, 0.85);
+    margin-bottom: 30px;
+}
+
+.locationPin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8%;
+    right: 4%;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.locationPin:hover {
+    transform: scale(1.05);
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    top: 11%;
+    right: 15%;
+    width: 220px;
+    height: 35px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    cursor: pointer;
+}
+
+.info p {
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0 0 0 8px;
+}   
+
+.addressCard:hover .info {
+    opacity: 1;
+    visibility: visible;
+}

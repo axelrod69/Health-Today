@@ -6,7 +6,6 @@
    height: 600px;
    background-image: linear-gradient(to bottom, rgba(214, 178, 237, 0), rgba(214, 178, 237, 1));
    position: relative;
-   /* overflow-x: hidden;   */
 }
 
 .firstSection {
@@ -17,7 +16,6 @@
    height: 100%;
    flex-basis: 65%;
    flex-shrink: 0;
-   /* background-color: greenyellow; */
 }
 
 .secondSection {
@@ -25,13 +23,11 @@
    flex-basis: 35%;
    flex-shrink: 0;
    position: relative;
-   /* background-color: pink; */
 }
 
 .textBlock {
    width: 70%;
    text-align: left;
-   /* background-color: red; */
 }
 
 h1 {
@@ -40,10 +36,9 @@ h1 {
    font-weight: bold;
 }
 
-.textBlock p {
+p {
    width: 75%;
    font-weight: 600;
-   text-align: left;
 }
 
 .buttonBloc {
@@ -60,18 +55,14 @@ h1 {
 
 @media only screen and (max-width: 600px) {
    .home {
-      display: flex;
-      flex-direction: column;
       margin-top: 70px;
-      height: 1080px;
-      /* background-color: red; */
+      height: 800px;
    }
 
    .textBlock {
-      width: 100%;
-      margin-top: 8px;
-      text-align: center;
-      /* background-color: green; */
+      width: 70%;
+      text-align: left;
+      background-color: green;
    }
 
    .textBlock h1 {
@@ -80,22 +71,9 @@ h1 {
    }
 
    .textBlock p {
-      /* display: flex;
-      justify-content: center;
-      align-items: center; */
       font-weight: 500;
-      text-align: center;
-      width: 100%;
    }
 
-   .buttonBloc {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-   }
-
-   
    /* .firstSection {
       display: flex;
       justify-content: end;
