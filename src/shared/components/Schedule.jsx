@@ -1,15 +1,18 @@
 import '../styles/schedule.css'
 import AddressCard from './AddressCard';
 import Calender from './Calender';
+import ImageOne from '../../assets/images/5080895.jpg'
+import ImageTwo from '../../assets/images/6071562.jpg'
+import ImageThree from '../../assets/images/7704972.jpg'
 
 function Schedule() {
     return (
         <>
             <div className='scheduleDiv'>
                 <div className='firstScheduleDiv'>
-                    <AddressCard />
-                    <AddressCard />
-                    <AddressCard />
+                    <AddressCard image={ImageOne} />
+                    <AddressCard image={ImageTwo} />
+                    <AddressCard image={ImageThree} />
                 </div>
                 <div className='secondScheduleDiv'>
                     <p>A great system application for hospital center & health care</p>

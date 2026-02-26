@@ -1,13 +1,14 @@
-
 .addressCard {
     display: flex;
     position: relative;
+    flex-direction: column;
     width: 70%;
     height: 250px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: rgba(186, 153, 247, 0.85);
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
 .locationPin {
@@ -48,15 +49,92 @@
     cursor: pointer;
 }
 
+.arrowBox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45%;
+    height: 50px;
+    z-index: 4;
+    pointer-events: none;   /* so the box itself doesn't block clicks */
+}
+
+.arrowBox > * {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: auto;   /* arrows are clickable */
+}
+
+.leftArrow {
+    left: 10px;             /* fixed distance from left */
+    width: 40px;            /* or 60px, 70px - size won't move it */
+    height: 40px;
+    color: white;
+}
+
+.rightArrow {
+    right: 10px;            /* fixed distance from right */
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+/* .arrowBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 45%;
+    z-index: 4;
+}
+
+.leftArrow {
+    height: 50px;
+    width: 50px;
+    color: white;
+}
+
+.rightArrow {
+    height: 50px;
+    width: 50px;
+    color: white;
+} */
+
 .info p {
     font-size: 10px;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
     margin: 0 0 0 8px;
-}   
+}
 
 .addressCard:hover .info {
     opacity: 1;
     visibility: visible;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.locationPin,
+.info {
+    z-index: 2;
+}
+
+.addressCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.addressCard img {
+    position: relative;
+    z-index: 0;
 }
