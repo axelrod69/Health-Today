@@ -12,17 +12,24 @@
     z-index: 3;
 }
 
-.dots>div {
+.dots > .dot {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     margin-right: 8px;
     transition: transform 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
+    border: 0;
+    padding: 0;
 }
 
-.dots>div:hover {
+.dots > .dot:hover {
     border: 2px solid purple;
     transform: scale(1.5);
+}
+
+.dots > .dot.active {
+    background-color: purple;
+    transform: scale(1.4);
 }

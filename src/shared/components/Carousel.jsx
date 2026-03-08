@@ -1,6 +1,7 @@
 import '../styles/carousel.css'
+import { useState } from 'react'
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs'
-import carouselData from '../../data/carousel.json'
+import carouselData from '../../data/carouselImages.json'
 import slide1 from '../../assets/images/5080895.jpg'
 import slide2 from '../../assets/images/6071562.jpg'
 import slide3 from '../../assets/images/7704972.jpg'

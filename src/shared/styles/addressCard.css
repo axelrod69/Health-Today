@@ -9,6 +9,13 @@
     background-color: rgba(186, 153, 247, 0.85);
     margin-bottom: 30px;
     overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    /* Chrome, Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* old Edge */
 }
 
 .locationPin {
@@ -22,12 +29,17 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .locationPin:hover {
     transform: scale(1.05);
+}
+
+.locationPin:hover+.info {
+    opacity: 1;
+    visibility: visible;
 }
 
 .info {
@@ -56,52 +68,46 @@
     top: 45%;
     height: 50px;
     z-index: 4;
-    pointer-events: none;   /* so the box itself doesn't block clicks */
+    pointer-events: none;
+    /* so the box itself doesn't block clicks */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.arrowBox > * {
+.arrowBox>* {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    pointer-events: auto;   /* arrows are clickable */
+    pointer-events: auto;
+    /* arrows are clickable */
+    cursor: pointer;
 }
 
 .leftArrow {
-    left: 10px;             /* fixed distance from left */
-    width: 40px;            /* or 60px, 70px - size won't move it */
+    left: 10px;
+    /* fixed distance from left */
+    width: 40px;
+    /* or 60px, 70px - size won't move it */
     height: 40px;
     color: white;
+    cursor: pointer;
 }
 
 .rightArrow {
-    right: 10px;            /* fixed distance from right */
+    right: 10px;
+    /* fixed distance from right */
     width: 40px;
     height: 40px;
     color: white;
 }
 
-/* .arrowBox {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    top: 45%;
-    z-index: 4;
+.addressCard:hover .arrowBox {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
 }
 
-.leftArrow {
-    height: 50px;
-    width: 50px;
-    color: white;
-}
-
-.rightArrow {
-    height: 50px;
-    width: 50px;
-    color: white;
-} */
 
 .info p {
     font-size: 10px;
@@ -109,11 +115,6 @@
     text-align: center;
     white-space: nowrap;
     margin: 0 0 0 8px;
-}
-
-.addressCard:hover .info {
-    opacity: 1;
-    visibility: visible;
 }
 
 img {
@@ -137,4 +138,34 @@ img {
 .addressCard img {
     position: relative;
     z-index: 0;
+}
+
+.addressCardImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    animation: addressCardFadeIn 450ms ease;
+}
+
+@keyframes addressCardFadeIn {
+    from {
+        opacity: 0.35;
+        transform: scale(1.01);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.addressCardEmpty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-weight: 600;
+    z-index: 2;
 }

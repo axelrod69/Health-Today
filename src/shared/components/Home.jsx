@@ -25,11 +25,19 @@ function Home() {
             <div className="home">
                 <div className="firstSection">
                     {!isMobile && Content}
-                    {isMobile && <NameCard />}
+                    {isMobile && <NameCard name={'Dr. Partha Pratim Paul'}/>}
                 </div>
                 <div className="secondSection">
                     {isMobile && Content}
-                    {!isMobile && <NameCard />}
+                    {!isMobile && <NameCard
+                        name={'Dr. Partha Pratim Paul'}
+                        style={{
+                            position: 'relative',
+                            top: '70%',
+                            left: '31%',
+                            zIndex: '100'
+                        }}
+                    />}
                 </div>
                 <Shape style={{
                     position: 'absolute',

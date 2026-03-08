@@ -1,0 +1,48 @@
+{
+    "slides": [
+        {
+            "slideOne": [
+                {
+                    "src": "slide1",
+                    "alt": "First slide"
+                },
+                {
+                    "src": "slide2",
+                    "alt": "Second slide"
+                },
+                {
+                    "src": "slide3",
+                    "alt": "Third slide"
+                }
+            ],
+            "slideTwo": [
+                {
+                    "src": "slide4",
+                    "alt": "Fourth slide"
+                },
+                {
+                    "src": "slide5",
+                    "alt": "Fifth slide"
+                },
+                {
+                    "src": "slide6",
+                    "alt": "Sixth slide"
+                }
+            ],
+            "slideThree": [
+                {
+                    "src": "slide7",
+                    "alt": "Seventh slide"
+                },
+                {
+                    "src": "slide8",
+                    "alt": "Eight slide"
+                },
+                {
+                    "src": "slide9",
+                    "alt": "Ninth slide"
+                }
+            ]
+        }
+    ]
+}

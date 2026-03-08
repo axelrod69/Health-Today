@@ -1,0 +1,70 @@
+.mapCardOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.mapCard {
+    position: relative;
+    height: 320px;
+    width: 420px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+    padding: 18px 22px;
+    display: flex;
+    flex-direction: column;
+    animation: mapCardFadeIn 220ms ease-out;
+}
+
+.mapCardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.mapCardTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.mapCardClose {
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 50%;
+    line-height: 1;
+}
+
+.mapCardClose:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.mapCardBody {
+    flex: 1;
+    border-radius: 14px;
+    background-color: #f4f4ff;
+    padding: 14px;
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+}
+
+@keyframes mapCardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
