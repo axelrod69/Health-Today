@@ -1,9 +1,10 @@
+import '../styles/firstScreen.css'
 import Home from "../../shared/components/Home";
 import NavBar from "../../shared/components/NavBar";
 import Speciality from "../../shared/components/Speciality";
 import Schedule from "../../shared/components/Schedule";
-import Carousel from "../../shared/components/Carousel"
-import '../styles/firstScreen.css'
+import AboutUs from '../../shared/components/AboutUs';
+import Footer from '../../shared/components/Footer';
 
 function FirstScreen() {
     return (
@@ -13,6 +14,8 @@ function FirstScreen() {
             <Home />
             <Speciality />
             <Schedule />
+            <AboutUs />
+            <Footer />
         </div>
     );
 }

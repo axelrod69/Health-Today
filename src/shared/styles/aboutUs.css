@@ -1,0 +1,124 @@
+.aboutUsDiv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+    background-image: linear-gradient(to bottom, rgba(214, 178, 237, 0), rgba(214, 178, 237, 1));
+}
+
+.aboutUsText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.aboutDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 1200px;
+    /* background-color: red; */
+}
+
+.aboutDescription p {
+    color: gray;
+    font-weight: 500;
+}
+
+.doctorTestimonials {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    margin-bottom: 120px;
+}
+
+.doctorTestimonials>div:first-child {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+}
+
+.doctorTestimonials>div:first-child>div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 70%;
+}
+
+/* .doctorTestimonials>div:first-child>div:last-child>h2 {
+    background-color: red;
+} */
+
+.doctorTestimonials>div:first-child>div:last-child>p {
+    width: 100%;
+    margin: 0;
+    font-size: 18px;
+}
+
+.doctorTestimonials>div:last-child {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+}
+
+.doctorTestimonials>div:last-child>div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 70%;
+    margin-right: 10px;
+}
+
+/* .doctorTestimonials>div:last-child>div:last-child>h2 {
+    background-color: red;
+} */
+
+.doctorTestimonials>div:last-child>div:last-child>p {
+    width: 100%;
+    margin: 0;
+    font-size: 18px;
+
+}
+
+.credentials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    flex: 1;
+}
+
+.degree {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* .signature {
+    flex: 1;
+    height: 100%;
+    background-color: orange;
+} */
