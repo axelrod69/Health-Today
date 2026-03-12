@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .firstLine {
@@ -114,7 +114,7 @@ h2 {
     margin-bottom: 100px;
 }
 
-@media only screen and (max-width: 600px) {
+@media (min-width: 374px) and (max-width: 767px) {
     .specialityDiv {
         padding-left: 20px;
         padding-right: 20px;
@@ -122,12 +122,193 @@ h2 {
     }
 
     .headerText {
-        margin-top: 50px;
-        /* background-color: yellow; */
+        margin-top: 4vw;
+    }
+
+    .firstLine {
+        width: 15vw;
+        height: 1vw;
+        background-color: blueviolet;
+        margin-right: 2vw;
+    }
+
+    .lastLine {
+        width: 15vw;
+        height: 1vw;
+        background-color: blueviolet;
+        margin-left: 2vw;
     }
 
     .headerText h2 {
-        font-size: 30px;
+        font-size: 6vw;
+        margin-bottom: 2vw;
+    }
 
+    .servicesFlex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4vw;
+        width: 100%;
+        margin-top: 8vw;
+        margin-bottom: 1vw;
+        flex-direction: row;
+        padding: 2vw;
+    }
+
+    .servicesDescription {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 8vw;
+    }
+
+    .firstDescriptionSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .firstDescriptionSection p {
+        text-align: center;
+        font-size: 7vw;
+        font-weight: bold;
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+        max-width: none;
+        line-height: 1.5;
+    }
+
+    .servicesDescription {
+        /* background-color: red; */
+
+    }
+
+    .secondDescriptionSection p {
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .secondDescription p {
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+        color: gray;
+        font-weight: 500;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .buttonSection {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 4vw;
+    }
+}
+
+@media (min-width: 912px) and (max-width: 1024px) {
+    .specialityDiv {
+        padding-left: 20px;
+        padding-right: 20px;
+        /* background-color: red; */
+    }
+
+    .headerText {
+        margin-top: 4vw;
+    }
+
+    .firstLine {
+        width: 15vw;
+        height: 1vw;
+        background-color: blueviolet;
+        margin-right: 2vw;
+    }
+
+    .lastLine {
+        width: 15vw;
+        height: 1vw;
+        background-color: blueviolet;
+        margin-left: 2vw;
+    }
+
+    .headerText h2 {
+        font-size: 6vw;
+        margin-bottom: 2vw;
+    }
+
+    .servicesFlex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4vw;
+        width: 100%;
+        margin-top: 8vw;
+        margin-bottom: 1vw;
+        flex-direction: row;
+        padding: 2vw;
+    }
+
+    .servicesDescription {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 8vw;
+    }
+
+    .firstDescriptionSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .firstDescriptionSection p {
+        text-align: center;
+        font-size: 7vw;
+        font-weight: bold;
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+        max-width: none;
+        line-height: 1.5;
+    }
+
+    .servicesDescription {
+        /* background-color: red; */
+
+    }
+
+    .secondDescriptionSection p {
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+    .buttonSection {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 4vw;
     }
 }

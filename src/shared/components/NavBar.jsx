@@ -1,8 +1,12 @@
 import '../styles/navBar.css'
 import MedicalIcon from '../../assets/icons/medical.svg?react'
 import DropDownIcon from '../../assets/icons/dropdown-icon.svg?react'
+import getScreenSize from '../hooks/useScreenSize'
 
 function NavBar() {
+
+    const { isMobile, isTablet, isLaptop } = getScreenSize()
+
     return (
         <>
             <div className="navBar">

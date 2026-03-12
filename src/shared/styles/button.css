@@ -5,12 +5,6 @@
     margin-right: 8px;
     border: none;
     cursor: pointer;
-    /* padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    overflow: visible;
-    box-sizing: border-box; */
 }
 
 .buttonClass.primary {
@@ -23,3 +17,24 @@
     border: 3px solid rgb(125, 67, 247);
 }
 
+@media (min-width: 374px) and (max-width: 769px) {
+    .buttonClass {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        height: 100%;
+        border: none;
+        cursor: pointer;
+    }
+
+    .buttonClass.primary {
+        background-color: rgb(125, 67, 247);
+        color: white;
+    }
+
+    .buttonClass.outline {
+        background-color: transparent;
+        border: 3px solid rgb(125, 67, 247);
+    }
+}

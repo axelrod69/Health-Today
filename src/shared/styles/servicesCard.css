@@ -25,3 +25,19 @@ p {
     font-size: 20px;
     color: #2D3748;
 }
+
+@media (min-width: 374px) and (max-width: 767px) {
+    .serviceCard {
+        height: 38vw;
+        width: 38vw;
+        border-radius: 20px;
+        padding: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+        margin-top: 1vw;
+        font-weight: 500;
+        font-size: 4vw;
+    }
+}

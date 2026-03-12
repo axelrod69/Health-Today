@@ -3,7 +3,8 @@
 .home {
    display: flex;
    width: 100%;
-   height: 600px;
+   height: 95vh;
+   /* background-color: orange; */
    background-image: linear-gradient(to bottom, rgba(214, 178, 237, 0), rgba(214, 178, 237, 1));
    position: relative;
 }
@@ -16,6 +17,8 @@
    height: 100%;
    flex-basis: 65%;
    flex-shrink: 0;
+   /* background-color: red; */
+
 }
 
 .secondSection {
@@ -23,11 +26,15 @@
    flex-basis: 35%;
    flex-shrink: 0;
    position: relative;
+   /* background-color: yellow; */
+
 }
 
 .textBlock {
+   display: flex;
+   flex-direction: column;
    width: 70%;
-   text-align: left;
+   /* background-color: pink; */
 }
 
 h1 {
@@ -48,36 +55,190 @@ p {
    align-items: center;
    height: 40px;
    width: 70%;
+   /* background-color: aquamarine; */
+   margin-left: 10vw;
    /* padding: 8px 0 8px 4px; */
 }
 
+@media (min-width: 374px) and (max-width: 767px) {
 
+   .nameCardContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      height: auto;
+      width: 100%;
+   }
 
-@media only screen and (max-width: 600px) {
+   .nameCardContainer>div:first-child {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      padding-right: 1vw;
+   }
+
+   .nameCardContainer>div:last-child {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      padding-left: 1vw;
+   }
+
    .home {
-      margin-top: 70px;
-      height: 800px;
+      /* background-color: purple; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 85vh;
+      margin-top: 8vh;
+      flex-direction: column;
+   }
+
+   .firstSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      /* background-color: orange; */
+   }
+
+   .secondSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      /* background-color: yellow; */
    }
 
    .textBlock {
-      width: 70%;
-      text-align: left;
-      background-color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      /* margin-bottom: 8vh; */
+      /* background-color: pink; */
    }
 
    .textBlock h1 {
+      font-size: 8vw;
+      text-align: center;
       margin-bottom: 0;
-      font-size: 40px;
+      font-weight: bold;
    }
 
    .textBlock p {
-      font-weight: 500;
+      font-size: 4vw;
+      text-align: center;
    }
 
-   /* .firstSection {
+   .buttonBloc {
       display: flex;
-      justify-content: end;
-      align-items: flex-start;
-   } */
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background-color: red;
+      margin-bottom: 4vh;
+   }
+}
 
+@media (min-width: 768px) and (max-width: 1024px) {
+
+   .nameCardContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      height: auto;
+      width: 85%;
+      /* background-color: red; */
+   }
+
+   .nameCardContainer>div:first-child {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      padding-right: 1vw;
+   }
+
+   .nameCardContainer>div:last-child {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      padding-left: 1vw;
+   }
+
+   .home {
+      /* background-color: purple; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120vh;
+      
+      flex-direction: column;
+   }
+
+   .firstSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      /* background-color: orange; */
+   }
+
+   .secondSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      /* background-color: yellow; */
+   }
+
+   .textBlock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      /* margin-bottom: 8vh; */
+      /* background-color: pink; */
+   }
+
+   .textBlock h1 {
+      font-size: 8vw;
+      text-align: center;
+      margin-bottom: 0;
+      font-weight: bold;
+   }
+
+   .textBlock p {
+      font-size: 4vw;
+      text-align: center;
+   }
+
+   .buttonBloc {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      /* background-color: red; */
+      margin-bottom: 4vh;
+   }
 }
