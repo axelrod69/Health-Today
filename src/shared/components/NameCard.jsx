@@ -3,9 +3,11 @@ import Shape from './Shape';
 import '../styles/shape.css'
 import { BsTelephone } from 'react-icons/bs';
 import getScreenSize from '../hooks/useScreenSize'
+import { useLocalization } from '../../core/localization/LocalizationProvider';
 
 function NameCard({ name, phoneNumber, style }) {
     const { isMobile, isTablet, isLaptop } = getScreenSize()
+    const { t } = useLocalization()
 
     return (
         <>
@@ -19,7 +21,7 @@ function NameCard({ name, phoneNumber, style }) {
                 }} />}
                 <div className='nameCardSecond'>
                     <h4>{name}</h4>
-                    {phoneNumber == null ? <p>Physician</p> : <div className='phoneNumber'>
+                    {phoneNumber == null ? <p>{t("common.physician")}</p> : <div className='phoneNumber'>
                         <BsTelephone />
                         <p>{phoneNumber}</p>
                     </div>}

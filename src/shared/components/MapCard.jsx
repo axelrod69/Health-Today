@@ -1,14 +1,15 @@
 import '../styles/mapCard.css'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
+import { useLocalization } from '../../core/localization/LocalizationProvider';
 
 function MapCard({ onClose, latitude, longitude, address }) {
 
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        // googleMapsApiKey: 'AIzaSyAGqgvRbLuHcf4lwSJFQEXM_vjYbGeAgYY'
-
         googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY
     })
+
+    const { t } = useLocalization()
 
     const containerStyle = {
         width: "100%",
@@ -28,7 +29,7 @@ function MapCard({ onClose, latitude, longitude, address }) {
                     onClick={(e) => e.stopPropagation()}
                 >
                     <div className='mapCardHeader'>
-                        <span className='mapCardTitle'>Address</span>
+                        <span className='mapCardTitle'>{t("mapCard.address")}</span>
                         <button
                             type='button'
                             className='mapCardClose'
@@ -46,7 +47,7 @@ function MapCard({ onClose, latitude, longitude, address }) {
                                 <Marker position={coOrdinates} />
                             </GoogleMap>
                         ) : (
-                            <div className='mapLoading'>Loading...</div>
+                            <div className='mapLoading'>{t("mapCard.loading")}</div>
                         )}
                     </div>
                 </div>

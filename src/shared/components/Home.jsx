@@ -3,16 +3,18 @@ import Button from './Button'
 import NameCard from './NameCard';
 import Shape from './Shape'
 import getScreenSize from '../hooks/useScreenSize'
+import { useLocalization } from '../../core/localization/LocalizationProvider';
 
 function Home() {
 
     const { isMobile, isTablet, isLaptop } = getScreenSize()
+    const { t } = useLocalization()
 
     const Content = (
         <>
             <div className='textBlock'>
-                <h1>Better care for your health</h1>
-                <p>The health and well-being of our patients will always be our priority. We follow the best practices for cleanliness</p>
+                <h1>{t("home.title")}</h1>
+                <p>{t("home.subtitle")}</p>
                 {/* <div className='buttonBloc'>
                     <Button label="View our services" variant="primary" />
                     <Button label="Emergency" variant="primary" />
@@ -32,7 +34,7 @@ function Home() {
                 top: '35%'
             }}>
                 <div>
-                    <NameCard name={'Dr. Partha Pratim Paul'} style={{
+                    <NameCard name={t("common.drParthaPratimPaul")} style={{
                         position: 'relative',
                         height: isMobile ? 'auto' : '12vw',
                         width: 'auto',
@@ -42,7 +44,7 @@ function Home() {
                     }} />
                 </div>
                 <div>
-                    <NameCard name={'Dr. Banya Ghosh Paul'} style={{
+                    <NameCard name={t("common.drBanyaGhoshPaul")} style={{
                         position: 'relative',
                         height: isMobile ? 'auto' : '12vw',
                         width: 'auto',
@@ -75,7 +77,7 @@ function Home() {
                 </div>
                 <div className="secondSection">
                     {!isMobile && !isTablet && <NameCard
-                        name={'Dr. Partha Pratim Paul'}
+                        name={t("common.drParthaPratimPaul")}
                         style={{
                             position: 'relative',
                             top: '70%',
@@ -84,7 +86,7 @@ function Home() {
                         }}
                     />}
                     {!isMobile && !isTablet && <NameCard
-                        name={'Dr. Banya Ghosh Paul'}
+                        name={t("common.drBanyaGhoshPaul")}
                         style={{
                             position: 'relative',
                             top: '51.4%',

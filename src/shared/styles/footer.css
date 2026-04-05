@@ -87,3 +87,98 @@
     color: #8800FF;
     cursor: pointer;
 }
+
+@media (min-width: 374px) and (max-width: 1024px) {
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        background-color: rgba(125, 71, 245, 0.4);
+        box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .footerBody {
+        height: auto;
+        width: 100%;
+    }
+
+    .footerBody>div:first-child {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    .h2Div>h2 {
+        font-size: 5vw;
+    }
+
+    .footerBody>div:nth-child(2) {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .footerBody>div:nth-child(2)>h2 {
+        margin: 0 0 2vw 0;
+        align-items: center;
+        text-decoration: underline;
+        text-underline-offset: 2vw;
+        font-size: 4vw;
+    }
+
+    .footerBody>div:nth-child(2)>p {
+        margin: 0;
+        color: #8800FF;
+        cursor: pointer;
+        font-size: 2vw;
+    }
+
+    .footerBody>div:last-child {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .footerBody>div:last-child>h2 {
+        margin: 0;
+        font-size: 4vw;
+    }
+
+    .footerBody>div:last-child>p {
+        margin: 0;
+        color: #8800FF;
+        cursor: pointer;
+        font-size: 2vw;
+    }
+
+    .footNote {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(125, 71, 245, 0.5);
+        height: 6vw;
+        width: 100%;
+        margin-top: 1vw;
+    }
+
+    .footNote>p {
+        align-items: center;
+        font-size: 3.5vw;
+        font-weight: bold;
+        color: #8800FF;
+        cursor: pointer;
+    }
+}

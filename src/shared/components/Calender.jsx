@@ -1,35 +1,38 @@
 import '../styles/calender.css'
 import CalenderIcon from '../../assets/icons/calendar-icon.svg?react'
 import Clock from '../../assets/icons/clock.svg?react'
-import Closed from '../../assets/icons/closed.svg?react'
 import { useEffect, useState } from 'react';
+import getScreenSize from '../hooks/useScreenSize'
+import { useLocalization } from '../../core/localization/LocalizationProvider';
 
 function Calender() {
     const [timings, setTimings] = useState([])
+    const { isMobile, isTablet, isLaptop } = getScreenSize()
+    const { t, locale } = useLocalization()
 
     const schedule = [
-        { "day": "Monday", "timeMorning": "09:30 AM - 02:30 PM", "timeEvening": "06:00 PM - 10:00 PM" },
-        { "day": "Tuesday", "timeMorning": "09:30 AM - 02:30 PM", "timeEvening": "06:00 PM - 10:00 PM" },
-        { "day": "Wednesday", "timeMorning": "09:30 AM - 02:30 PM", "timeEvening": "06:00 PM - 10:00 PM" },
-        { "day": "Thursday", "timeMorning": "09:30 AM - 02:30 PM", "timeEvening": "06:00 PM - 10:00 PM" },
-        { "day": "Friday", "timeMorning": "09:30 AM - 02:30 PM", "timeEvening": "06:00 PM - 10:00 PM" },
-        { "day": "Saturday", "timeMorning": "Closed", "timeEvening": "06:00 PM - 10:00 PM" },
-        { "day": "Sunday", "timeMorning": "09:30 AM - 02:30 PM", "timeEvening": "Closed" },
+        { "day": t("calender.monday"), "timeMorning": t("calender.openingTime"), "timeEvening": t("calender.closingTime") },
+        { "day": t("calender.tuesday"), "timeMorning": t("calender.openingTime"), "timeEvening": t("calender.closingTime") },
+        { "day": t("calender.wednesday"), "timeMorning": t("calender.openingTime"), "timeEvening": t("calender.closingTime") },
+        { "day": t("calender.thursday"), "timeMorning": t("calender.openingTime"), "timeEvening": t("calender.closingTime") },
+        { "day": t("calender.friday"), "timeMorning": t("calender.openingTime"), "timeEvening": t("calender.closingTime") },
+        { "day": t("calender.saturday"), "timeMorning": t("calender.closed"), "timeEvening": t("calender.closingTime") },
+        { "day": t("calender.sunday"), "timeMorning": t("calender.openingTime"), "timeEvening": t("calender.closed") },
     ];
 
     useEffect(() => {
         setTimings(schedule)
-    }, [])
+    }, [locale])
 
     return (
         <>
             <div className='calenderDiv'>
-                <h2>Timings</h2>
+                <h2>{t("calender.timings")}</h2>
                 <div className='timings'>
                     {timings.map((value) => (
                         <div>
                             <div>
-                                <div><CalenderIcon height={50} width={50} /></div>
+                                <div><CalenderIcon height={isMobile ? 40 : 50} width={isMobile ? 40 : 50} /></div>
                                 <div>
                                     {value['day']}
                                 </div>
@@ -44,7 +47,7 @@ function Calender() {
                                     </div>
                                 </div>
                                 <div>
-                                    <Clock height={30} width={30}/>
+                                    <Clock height={isMobile ? 20 : 30} width={isMobile ? 20 : 30}/>
                                 </div>
                             </div>
                         </div>

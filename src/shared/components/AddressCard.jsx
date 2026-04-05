@@ -5,6 +5,7 @@ import Dots from './Dots'
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
 import { useEffect, useState } from 'react'
 import MapCard from './MapCard'
+import { useLocalization } from '../../core/localization/LocalizationProvider';
 
 function AddressCard({ slides = [], autoPlayMs = 3500, latitude, longitude, address }) {
     const [activeIndex, setActiveIndex] = useState(0)
@@ -24,6 +25,8 @@ function AddressCard({ slides = [], autoPlayMs = 3500, latitude, longitude, addr
         setActiveIndex((prev) => (prev + 1) % count)
     }
 
+    const { t } = useLocalization()
+
     useEffect(() => {
         if (count <= 1) return
         const id = setInterval(() => {
@@ -41,7 +44,7 @@ function AddressCard({ slides = [], autoPlayMs = 3500, latitude, longitude, addr
                 </div>
                 <div className='info'>
                     <InfoIcon height={20} width={20} />
-                    <p>Check Location On Google Map</p>
+                    <p>{t("addressCard.checkLocationOnGoogle")}</p>
                 </div>
                 <div className='arrowBox'>
                     <BsArrowLeftCircle className='leftArrow' onClick={goPrev} />

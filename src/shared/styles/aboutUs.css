@@ -122,3 +122,169 @@
     height: 100%;
     background-color: orange;
 } */
+
+@media (min-width: 374px) and (max-width: 1024px) {
+    .aboutUsDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        background-image: linear-gradient(to bottom, rgba(214, 178, 237, 0), rgba(214, 178, 237, 1));
+    }
+
+    .firstLine {
+        width: 15vw;
+        height: 1vw;
+        background-color: blueviolet;
+        margin-top: 2vw;
+        margin-right: 2vw;
+    }
+
+    .lastLine {
+        width: 15vw;
+        height: 1vw;
+        background-color: blueviolet;
+        margin-top: 2vw;
+        margin-left: 2vw;
+    }
+
+    .aboutUsText>h2 {
+        font-size: 6vw;
+    }
+
+    .aboutDescription {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .aboutDescription>p {
+        text-align: center;
+        /* max-width: 100%; */
+        width: 80%;
+        font-size: 4vw;
+        color: gray;
+    }
+
+    .doctorTestimonials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 8vw;
+        margin-bottom: 120px;
+    }
+
+    .doctorTestimonials>div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .doctorTestimonials>div:first-child>div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-bottom: 4vw;
+    }
+
+    .doctorTestimonials>div:first-child>div:first-child>h2 {
+        margin-top: 4vw;
+        font-size: 6vw;
+    }
+
+    .doctorTestimonials>div:first-child>div:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .doctorTestimonials>div:first-child>div:last-child>p {
+        margin-top: 4vw;
+        max-width: 80%;
+        font-size: 4vw;
+    }
+
+    .doctorTestimonials>div:first-child>div:last-child>p {
+        margin-top: 4vw;
+        max-width: 80%;
+        font-size: 4vw;
+    }
+
+    .degreeOne{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        margin-top: 2vw;
+    }
+
+    .doctorTestimonials>div:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10vw;
+        height: auto;
+    }
+
+    .doctorTestimonials>div:last-child>div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-bottom: 4vw;
+    }
+
+    .doctorTestimonials>div:last-child>div:first-child>h2 {
+        margin-top: 4vw;
+        font-size: 6vw;
+    }
+
+    .doctorTestimonials>div:last-child>div:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .doctorTestimonials>div:last-child>div:last-child>p {
+        margin-top: 4vw;
+        max-width: 80%;
+        font-size: 4vw;
+    }
+
+    .doctorTestimonials>div:last-child>div:last-child>p {
+        margin-top: 4vw;
+        max-width: 80%;
+        font-size: 4vw;
+    }
+
+    .degreeTwo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        margin-top: 2vw;
+    }
+
+}

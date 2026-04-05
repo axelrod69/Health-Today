@@ -68,3 +68,9 @@
         transform: translateY(0) scale(1);
     }
 }
+
+@media (min-width: 374px) and (max-width: 767px) {
+    .mapCard {
+        margin: 0 20px;
+    }
+}

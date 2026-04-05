@@ -6,3 +6,14 @@
     box-shadow: 5px 5px 20px grey;
     background-color: rgba(125, 71, 245, 0.6);
 }
+
+@media (min-width: 374px) and (max-width: 767px) {
+    .pictureCard {
+        height: 25vw;
+        width: 30vw;
+        margin: 0 4vw 0 8vw;
+        border-radius: 10px;
+        box-shadow: 5px 5px 20px grey;
+        background-color: rgba(125, 71, 245, 0.6);
+    }
+}

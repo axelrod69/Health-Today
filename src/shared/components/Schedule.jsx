@@ -9,7 +9,8 @@ import ImageFive from '../../assets/images/8974630.jpg'
 import ImageSix from '../../assets/images/9569880.jpg'
 import carouselImages from '../../data/carouselImages.json'
 import NameCard from './NameCard';
-import { BsTelephone, BsTelephoneX } from 'react-icons/bs';
+import getScreenSize from '../hooks/useScreenSize'
+import { useLocalization } from '../../core/localization/LocalizationProvider';
 
 function Schedule() {
     // Map the JSON src keys ("slide1"..."slide9") to real imported images.
@@ -26,13 +27,16 @@ function Schedule() {
         slide9: ImageThree,
     }
 
+    const { isMobile, isTablet, isLaptop } = getScreenSize()
+    const { t } = useLocalization()
+
 
 
     const slidesRoot = carouselImages?.slides?.[0] ?? {}
     const groups = [
-        { key: 'slideOne', title: 'Slide One', slides: slidesRoot.slideOne ?? [], latitude: 22.643464807575757, longitude: 88.42530199591306, address: "K.C Ghosh Memorial Homoeo Hall, Sapui Para, Rajbari, Dum Dum, Kolkata, West Bengal 700028" },
-        { key: 'slideTwo', title: 'Slide Two', slides: slidesRoot.slideTwo ?? [], latitude: 22.643357899125526, longitude: 88.42439026561632, address: "R.K Paul Memorial Homoeo Hall, 47, PK Guha Road, Dum Dum, Kolkata, West Bengal 700028" },
-        { key: 'slideThree', title: 'Slide Three', slides: slidesRoot.slideThree ?? [], latitude: 22.643837, longitude: 88.427671, address: "B.B Paul Memoril Homoeo Hall, 29, Italgacha Road, Ward No-6, P.O Italgacha, Kolkata, West Bengal 700079" },
+        { key: 'slideOne', title: 'Slide One', slides: slidesRoot.slideOne ?? [], latitude: 22.643464807575757, longitude: 88.42530199591306, address: t("schedule.addressOne") },
+        { key: 'slideTwo', title: 'Slide Two', slides: slidesRoot.slideTwo ?? [], latitude: 22.643357899125526, longitude: 88.42439026561632, address: t("schedule.addressTwo") },
+        { key: 'slideThree', title: 'Slide Three', slides: slidesRoot.slideThree ?? [], latitude: 22.643837, longitude: 88.427671, address: t("schedule.addressThree") },
     ].map((group) => ({
         ...group,
         slides: group.slides.map((s) => ({
@@ -61,20 +65,32 @@ function Schedule() {
                         }
                     </div>
                     <div className='secondScheduleDiv'>
-                        <p>A great system application for hospital center & health care</p>
+                        <p>{t("schedule.greatSystemApplication")}</p>
                         <div className='secondParagraph'>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p>{t("schedule.systemApplicationDescription")}</p>
                         </div>
                         <Calender />
                     </div>
                 </div>
                 <div className='appointment'>
-                    <p>For Appointment, Call on the below numbers:</p>
+                    <p>{t("schedule.forAppointment")}</p>
                     <div className='numberDiv'>
-                        <NameCard name={'Dr. Partha Pratim Paul'}
-                        phoneNumber={'+919330954566'}/>
-                        <NameCard name={'Dr. Banya Ghosh Paul'}
-                        phoneNumber={'+919433302899'}/>
+                        <NameCard name={t("common.drParthaPratimPaul")}
+                        phoneNumber={t("common.drParthaPratimPaulNo")} style={{
+                        height: isMobile ? 'auto' : isTablet ? '14vw' :  '120px',
+                        width: 'auto',
+                        // top: '40%',
+                        // left: '21%',
+                        zIndex: '100'
+                    }}/>
+                        <NameCard name={t("common.drBanyaGhoshPaul")}
+                        phoneNumber={t("common.drBanyaGhoshPaulNo")} style={{
+                        height: isMobile ? 'auto' : isTablet ? '14vw' : '120px',
+                        width: 'auto',
+                        // top: '40%',
+                        // left: '21%',
+                        zIndex: '100'
+                    }}/>
                     </div>
                 </div>
             </div>
