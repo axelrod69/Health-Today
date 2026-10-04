@@ -46,7 +46,7 @@ function AboutUs() {
 
     return (
         <>
-            <div className='aboutUsDiv'>
+            <div id="about" className='aboutUsDiv'>
                 <div className='aboutUsText'>
                     <div className='firstLine'></div>
                     <h2>{t("common.aboutUs")}</h2>

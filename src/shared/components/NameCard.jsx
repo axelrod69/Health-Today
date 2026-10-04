@@ -13,8 +13,8 @@ function NameCard({ name, phoneNumber, style }) {
         <>
             <div className='nameCard' style={style}>
                 {!isMobile && <Shape style={{
-                    backgroundColor: 'white',
-                    border: '6px solid rgb(125, 71, 245)',
+                    backgroundColor: 'var(--color-surface)',
+                    border: '6px solid var(--color-brand)',
                     // height: '100%',
                     width: isMobile ? '12vw' : isTablet ? '10vw' : '90px',
                     margin: isMobile ? '1vw' : isTablet ? '1vw' : '8px'

@@ -9,8 +9,8 @@ function ServicesCard({ image, serviceText }) {
         <>
             <div className="serviceCard">
                 <Shape style={{
-                    backgroundColor: 'white',
-                    border: '4px solid rgb(125, 71, 245)',
+                    backgroundColor: 'var(--color-surface)',
+                    border: '4px solid var(--color-brand)',
                     height: isMobile ? '20vw' : isTablet ? '20vw' : '140px',
                     width: isMobile ? '22vw' : isTablet ? '20vw' : '140px',
                     margin: '8px'

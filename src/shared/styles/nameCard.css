@@ -4,7 +4,7 @@
     width: 290px;
     height: 110px;
     border-radius: 10px;
-    background-color: rgba(125, 71, 245, 0.6);
+    background-color: var(--color-brand-card);
     box-shadow: 5px 5px 20px grey;
     padding: 10px;
     /* position: relative;
@@ -22,7 +22,7 @@
 }
 
 .nameCard p {
-    color: white;
+    color: var(--color-on-brand);
     text-align: start;
     font-size: 20px;
 }
@@ -47,7 +47,7 @@
 
 @media (min-width: 374px) and (max-width: 767px) {
     .nameCard p {
-        color: white;
+        color: var(--color-on-brand);
         text-align: start;
         font-size: 3vw;
     }
@@ -59,7 +59,7 @@
 
 @media (min-width: 768px) and (max-width: 1024px) { 
     .nameCard p {
-        color: white;
+        color: var(--color-on-brand);
         text-align: start;
         font-size: 2vw;
     }

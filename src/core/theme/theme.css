@@ -1,0 +1,52 @@
+/* Shared palette: both OS themes use these website colors for now. */
+:root {
+  color-scheme: only light;
+  --color-background: #ffffff;
+  --color-text: #213547;
+  --color-text-muted: gray;
+  --color-text-strong: black;
+  --color-text-card: #2d3748;
+  --color-text-dialog: #333;
+  --color-surface: white;
+  --color-surface-subtle: #f9f9f9;
+  --color-surface-map: #f4f4ff;
+  --color-primary: rgb(125, 67, 247);
+  --color-brand: rgb(125, 71, 245);
+  --color-brand-soft: rgba(125, 71, 245, 0.4);
+  --color-brand-medium: rgba(125, 71, 245, 0.5);
+  --color-brand-card: rgba(125, 71, 245, 0.6);
+  --color-accent: #8800ff;
+  --color-accent-muted: #a991f2;
+  --color-accent-decoration: blueviolet;
+  --color-navigation-surface: #d2caed;
+  --color-card-surface: rgba(186, 153, 247, 0.85);
+  --color-card-hover: rgba(186, 153, 247, 1);
+  --color-schedule-text: rgb(137, 0, 196);
+  --color-gradient-clear: rgba(214, 178, 237, 0);
+  --color-gradient-soft: rgba(214, 178, 237, 0.4);
+  --color-gradient-strong: rgba(214, 178, 237, 0.9);
+  --color-gradient-solid: rgba(214, 178, 237, 1);
+  --color-on-brand: white;
+  --color-link: #646cff;
+  --color-link-hover: #747bff;
+  --color-focus: #646cff;
+  --color-shadow-card: rgba(0, 0, 0, 0.1);
+  --color-shadow-overlay: rgba(0, 0, 0, 0.25);
+  --color-shadow-calendar: rgb(204, 202, 202);
+  --color-overlay: rgba(0, 0, 0, 0.4);
+  --color-overlay-soft: rgba(0, 0, 0, 0.15);
+  --color-hover-overlay: rgba(0, 0, 0, 0.06);
+  --color-dots-clear: rgba(0, 0, 0, 0);
+  --color-dots-shade: rgba(94, 92, 92, 0.4);
+  --color-dot: rgba(255, 255, 255, 0.9);
+  --color-dot-active: purple;
+  --color-decoration-red: red;
+  --color-decoration-orange: orange;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Add dark palette overrides here when ready.
+       Inherit the shared palette and light native controls for now. */
+  }
+}

@@ -45,7 +45,7 @@
     text-align: left;
     max-width: 80%;
     font-size: 18px;
-    color: gray;
+    color: var(--color-text-muted);
 }
 
 .appointment {
@@ -115,7 +115,7 @@
         max-width: 100%;
         width: 100%;
         font-size: 4vw;
-        color: gray;
+        color: var(--color-text-muted);
     }
 
     .appointment {
@@ -181,7 +181,7 @@
         max-width: 100%;
         width: 100%;
         font-size: 4vw;
-        color: gray;
+        color: var(--color-text-muted);
     }
 
     .appointment {
@@ -246,7 +246,7 @@
         max-width: 100%;
         width: 100%;
         font-size: 18px;
-        color: gray;
+        color: var(--color-text-muted);
     }
 
     .appointment {

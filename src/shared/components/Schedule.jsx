@@ -47,7 +47,7 @@ function Schedule() {
 
     return (
         <>
-            <div className='schedule'>
+            <div id="schedule" className='schedule'>
                 <div className='scheduleDiv'>
                     <div className='firstScheduleDiv'>
 

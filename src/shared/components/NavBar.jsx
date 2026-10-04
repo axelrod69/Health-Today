@@ -20,10 +20,12 @@ function NavBar() {
                     </div>
                 </div>
                 <ul>
-                    <li>{t("navBar.home")}</li>
-                    <li>{t("navBar.about")}</li>
-                    <li>{t("navBar.services")}</li>
-                    <li>{t("navBar.appointment")}</li>
+                    <li><a href="#home">{t("navBar.home")}</a></li>
+                    <li>
+                        <a href="#services">{t("navBar.services")}</a>
+                    </li>
+                    <li><a href="#schedule">{t("navBar.appointment")}</a></li>
+                    <li><a href="#about">{t("navBar.about")}</a></li>
                 </ul>
                 <div className='languageDropdown'>
                     {t("navBar.changeLanguage")}

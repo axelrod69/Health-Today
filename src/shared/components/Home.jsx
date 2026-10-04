@@ -59,7 +59,7 @@ function Home() {
 
     return (
         <>
-            <div className="home">
+            <div id="home" className="home">
                 <div className="firstSection">
                     {!isMobile && !isTablet && Content}
                     {(isMobile || isTablet) && NameCardContainer}
@@ -71,7 +71,7 @@ function Home() {
                             width: isMobile ? '80vw' : '90vw',
                             // height: '80%',
                             // width: '80%',
-                            backgroundColor: 'rgba(125, 71, 245, 0.4)'
+                            backgroundColor: 'var(--color-brand-soft)'
                         }} />
                     }
                 </div>
@@ -101,7 +101,7 @@ function Home() {
                         position: 'absolute',
                         height: isTablet ? '400px' : '580px',
                         width: isTablet ? '400px' : '600px',
-                        backgroundColor: 'rgba(125, 71, 245, 0.4)',
+                        backgroundColor: 'var(--color-brand-soft)',
                         top: isTablet ? '0' : '10%',
                         right: isTablet ? '0' : '5%'
                     }} />

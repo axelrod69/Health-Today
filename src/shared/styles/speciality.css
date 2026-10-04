@@ -5,7 +5,7 @@
     flex-direction: column;
     width: 100%;
     /* height: 600px; */
-    background-image: linear-gradient(to bottom, rgba(214, 178, 237, 0.4), rgba(214, 178, 237, 0));
+    background-image: linear-gradient(to bottom, var(--color-gradient-soft), var(--color-gradient-clear));
 }
 
 .headerText {
@@ -18,14 +18,14 @@
 .firstLine {
     width: 180px;
     height: 5px;
-    background-color: blueviolet;
+    background-color: var(--color-accent-decoration);
     margin-right: 20px;
 }
 
 .lastLine {
     width: 180px;
     height: 5px;
-    background-color: blueviolet;
+    background-color: var(--color-accent-decoration);
     margin-left: 20px;
 }
 
@@ -92,7 +92,7 @@ h2 {
 .secondDescriptionSection p {
     text-align: left;
     font-weight: bold;
-    color: black;
+    color: var(--color-text-strong);
     width: 80%;
     font-size: 18px;
     margin-top: 0;
@@ -104,7 +104,7 @@ h2 {
     text-align: left;
     width: 80%;
     margin-top: 10px;
-    color: gray;
+    color: var(--color-text-muted);
     font-weight: 500;
 }
 
@@ -128,14 +128,14 @@ h2 {
     .firstLine {
         width: 15vw;
         height: 1vw;
-        background-color: blueviolet;
+        background-color: var(--color-accent-decoration);
         margin-right: 2vw;
     }
 
     .lastLine {
         width: 15vw;
         height: 1vw;
-        background-color: blueviolet;
+        background-color: var(--color-accent-decoration);
         margin-left: 2vw;
     }
 
@@ -203,7 +203,7 @@ h2 {
         text-align: center;
         width: 100%;
         margin-top: 10px;
-        color: gray;
+        color: var(--color-text-muted);
         font-weight: 500;
         padding: 0 16px;
         box-sizing: border-box;
@@ -233,14 +233,14 @@ h2 {
     .firstLine {
         width: 15vw;
         height: 1vw;
-        background-color: blueviolet;
+        background-color: var(--color-accent-decoration);
         margin-right: 2vw;
     }
 
     .lastLine {
         width: 15vw;
         height: 1vw;
-        background-color: blueviolet;
+        background-color: var(--color-accent-decoration);
         margin-left: 2vw;
     }
 

@@ -11,7 +11,7 @@ function Speciality() {
 
     return (
         <>
-            <div className="specialityDiv">
+            <div id="services" className="specialityDiv">
                 <div className='headerText'>
                     <div className='firstLine'></div>
                     <h2>{t("speciality.ourServices")}</h2>
@@ -34,7 +34,7 @@ function Speciality() {
                             <p>{t("speciality.aspectDescription")}</p>
                         </div>
                         <div className='buttonSection'>
-                            <Button label={t("speciality.moreAboutUs")} variant="outline" />
+                            <Button label={t("common.moreAboutUs")} variant="outline" />
                         </div>
                     </div>
                 </div>

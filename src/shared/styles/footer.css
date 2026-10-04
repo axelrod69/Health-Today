@@ -5,8 +5,8 @@
     flex-direction: column;
     height: 200px;
     width: 100%;
-    background-color: rgba(125, 71, 245, 0.4);
-    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.25);
+    background-color: var(--color-brand-soft);
+    box-shadow: 0 -10px 20px var(--color-shadow-overlay);
 }
 
 .footerBody {
@@ -43,7 +43,7 @@
 
 .footerBody>div:nth-child(2)>p {
     margin: 0;
-    color: #8800FF;
+    color: var(--color-accent);
     cursor: pointer;
     font-size: 18px;
 }
@@ -64,7 +64,7 @@
 
 .footerBody>div:last-child>p {
     margin: 0;
-    color: #8800FF;
+    color: var(--color-accent);
     cursor: pointer;
     font-size: 18px;
 }
@@ -74,7 +74,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-color: rgba(125, 71, 245, 0.5);
+    background-color: var(--color-brand-medium);
     height: 30px;
     width: 100%;
     margin-top: auto;
@@ -84,7 +84,7 @@
 .footNote>p {
     font-size: 15px;
     font-weight: bold;
-    color: #8800FF;
+    color: var(--color-accent);
     cursor: pointer;
 }
 
@@ -96,8 +96,8 @@
         flex-direction: column;
         height: auto;
         width: 100%;
-        background-color: rgba(125, 71, 245, 0.4);
-        box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.25);
+        background-color: var(--color-brand-soft);
+        box-shadow: 0 -10px 20px var(--color-shadow-overlay);
     }
 
     .footerBody {
@@ -137,7 +137,7 @@
 
     .footerBody>div:nth-child(2)>p {
         margin: 0;
-        color: #8800FF;
+        color: var(--color-accent);
         cursor: pointer;
         font-size: 2vw;
     }
@@ -158,7 +158,7 @@
 
     .footerBody>div:last-child>p {
         margin: 0;
-        color: #8800FF;
+        color: var(--color-accent);
         cursor: pointer;
         font-size: 2vw;
     }
@@ -168,7 +168,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: rgba(125, 71, 245, 0.5);
+        background-color: var(--color-brand-medium);
         height: 6vw;
         width: 100%;
         margin-top: 1vw;
@@ -178,7 +178,7 @@
         align-items: center;
         font-size: 3.5vw;
         font-weight: bold;
-        color: #8800FF;
+        color: var(--color-accent);
         cursor: pointer;
     }
 }

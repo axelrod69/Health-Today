@@ -5,8 +5,8 @@
     width: 70%;
     height: 250px;
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: rgba(186, 153, 247, 0.85);
+    box-shadow: 0 4px 10px var(--color-shadow-card);
+    background-color: var(--color-card-surface);
     margin-bottom: 30px;
     overflow: hidden;
     user-select: none;
@@ -25,7 +25,7 @@
     position: absolute;
     top: 8%;
     right: 4%;
-    background-color: white;
+    background-color: var(--color-surface);
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -56,8 +56,8 @@
     width: 220px;
     height: 35px;
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: white;
+    box-shadow: 0 4px 10px var(--color-shadow-card);
+    background-color: var(--color-surface);
     cursor: pointer;
 }
 
@@ -90,7 +90,7 @@
     width: 40px;
     /* or 60px, 70px - size won't move it */
     height: 40px;
-    color: white;
+    color: var(--color-on-brand);
     cursor: pointer;
 }
 
@@ -99,7 +99,7 @@
     /* fixed distance from right */
     width: 40px;
     height: 40px;
-    color: white;
+    color: var(--color-on-brand);
 }
 
 .addressCard:hover .arrowBox {
@@ -131,7 +131,7 @@ img {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.15);
+    background: var(--color-overlay-soft);
     z-index: 1;
 }
 
@@ -165,7 +165,7 @@ img {
     justify-content: center;
     height: 100%;
     width: 100%;
-    color: white;
+    color: var(--color-on-brand);
     font-weight: 600;
     z-index: 2;
 }
