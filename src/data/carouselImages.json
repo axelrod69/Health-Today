@@ -3,44 +3,44 @@
         {
             "slideOne": [
                 {
-                    "src": "slide1",
-                    "alt": "First slide"
+                    "src": "milanExterior",
+                    "alt": "Health Today chamber exterior at Milan Sangha"
                 },
                 {
-                    "src": "slide2",
-                    "alt": "Second slide"
+                    "src": "milanInterior",
+                    "alt": "Inside the Health Today chamber at Milan Sangha"
                 },
                 {
-                    "src": "slide3",
-                    "alt": "Third slide"
+                    "src": "milanConsultation",
+                    "alt": "Dr. Partha Pratim Paul consulting at the Milan Sangha chamber"
                 }
             ],
             "slideTwo": [
                 {
-                    "src": "slide4",
-                    "alt": "Fourth slide"
+                    "src": "galaxyEntrance",
+                    "alt": "Health Today chamber entrance at Maharaja Galaxy"
                 },
                 {
-                    "src": "slide5",
-                    "alt": "Fifth slide"
+                    "src": "galaxyReception",
+                    "alt": "Reception at the Maharaja Galaxy chamber"
                 },
                 {
-                    "src": "slide6",
-                    "alt": "Sixth slide"
+                    "src": "galaxyConsultation",
+                    "alt": "Dr. Partha Pratim Paul consulting at the Maharaja Galaxy chamber"
                 }
             ],
             "slideThree": [
                 {
-                    "src": "slide7",
-                    "alt": "Seventh slide"
+                    "src": "shonaliExterior",
+                    "alt": "Health Today chamber exterior at Shonali Shibir"
                 },
                 {
-                    "src": "slide8",
-                    "alt": "Eight slide"
+                    "src": "shonaliExterior",
+                    "alt": "Health Today chamber exterior at Shonali Shibir"
                 },
                 {
-                    "src": "slide9",
-                    "alt": "Ninth slide"
+                    "src": "shonaliExterior",
+                    "alt": "Health Today chamber exterior at Shonali Shibir"
                 }
             ]
         }

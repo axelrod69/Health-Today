@@ -1,33 +1,33 @@
 import '../styles/schedule.css'
 import AddressCard from './AddressCard';
 import Calender from './Calender';
-import ImageOne from '../../assets/images/5080895.jpg'
-import ImageTwo from '../../assets/images/6071562.jpg'
-import ImageThree from '../../assets/images/7704972.jpg'
-import ImageFour from '../../assets/images/7718492.jpg'
-import ImageFive from '../../assets/images/8974630.jpg'
-import ImageSix from '../../assets/images/9569880.jpg'
+import shonaliExterior from '../../assets/images/shonali-shibir-exterior.jpeg'
+import galaxyEntrance from '../../assets/images/maharaja-galaxy-entrance.jpeg'
+import galaxyReception from '../../assets/images/maharaja-galaxy-reception.jpeg'
+import galaxyConsultation from '../../assets/images/maharaja-galaxy-consultation.jpg'
+import milanExterior from '../../assets/images/milan-sangha-exterior.jpeg'
+import milanInterior from '../../assets/images/milan-sangha-interior.jpeg'
+import milanConsultation from '../../assets/images/milan-sangha-consultation.jpeg'
 import carouselImages from '../../data/carouselImages.json'
 import NameCard from './NameCard';
+import parthaPortrait from '../../assets/dr-partha-pratim-paul.png';
+import banyaPortrait from '../../assets/dr-banya-ghosh-paul.png';
 import getScreenSize from '../hooks/useScreenSize'
 import { useLocalization } from '../../core/localization/LocalizationProvider';
 
 function Schedule() {
-    // Map the JSON src keys ("slide1"..."slide9") to real imported images.
-    // You currently have 6 image files, so slide7..9 reuse slide1..3.
+    // Resolve carousel data keys to bundled images.
     const slideKeyToImage = {
-        slide1: ImageOne,
-        slide2: ImageTwo,
-        slide3: ImageThree,
-        slide4: ImageFour,
-        slide5: ImageFive,
-        slide6: ImageSix,
-        slide7: ImageOne,
-        slide8: ImageTwo,
-        slide9: ImageThree,
+        milanExterior,
+        milanInterior,
+        milanConsultation,
+        galaxyEntrance,
+        galaxyReception,
+        galaxyConsultation,
+        shonaliExterior,
     }
 
-    const { isMobile, isTablet, isLaptop } = getScreenSize()
+    const { isMobile, isTablet } = getScreenSize()
     const { t } = useLocalization()
 
 
@@ -40,7 +40,7 @@ function Schedule() {
     ].map((group) => ({
         ...group,
         slides: group.slides.map((s) => ({
-            image: slideKeyToImage[s.src] ?? ImageOne,
+            image: slideKeyToImage[s.src] ?? shonaliExterior,
             alt: s.alt ?? group.title,
         })),
     }))
@@ -76,6 +76,7 @@ function Schedule() {
                     <p>{t("schedule.forAppointment")}</p>
                     <div className='numberDiv'>
                         <NameCard name={t("common.drParthaPratimPaul")}
+                        image={parthaPortrait}
                         phoneNumber={t("common.drParthaPratimPaulNo")} style={{
                         height: isMobile ? 'auto' : isTablet ? '14vw' :  '120px',
                         width: 'auto',
@@ -84,6 +85,7 @@ function Schedule() {
                         zIndex: '100'
                     }}/>
                         <NameCard name={t("common.drBanyaGhoshPaul")}
+                        image={banyaPortrait}
                         phoneNumber={t("common.drBanyaGhoshPaulNo")} style={{
                         height: isMobile ? 'auto' : isTablet ? '14vw' : '120px',
                         width: 'auto',

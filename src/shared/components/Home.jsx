@@ -4,6 +4,9 @@ import NameCard from './NameCard';
 import Shape from './Shape'
 import getScreenSize from '../hooks/useScreenSize'
 import { useLocalization } from '../../core/localization/LocalizationProvider';
+import caduceus from '../../assets/icons/caduceus-transparent.png';
+import banyaPortrait from '../../assets/dr-banya-ghosh-paul.png';
+import parthaPortrait from '../../assets/dr-partha-pratim-paul.png';
 
 function Home() {
 
@@ -34,7 +37,7 @@ function Home() {
                 top: '35%'
             }}>
                 <div>
-                    <NameCard name={t("common.drParthaPratimPaul")} style={{
+                    <NameCard name={t("common.drParthaPratimPaul")} image={parthaPortrait} style={{
                         position: 'relative',
                         height: isMobile ? 'auto' : '12vw',
                         width: 'auto',
@@ -44,7 +47,7 @@ function Home() {
                     }} />
                 </div>
                 <div>
-                    <NameCard name={t("common.drBanyaGhoshPaul")} style={{
+                    <NameCard name={t("common.drBanyaGhoshPaul")} image={banyaPortrait} style={{
                         position: 'relative',
                         height: isMobile ? 'auto' : '12vw',
                         width: 'auto',
@@ -78,6 +81,7 @@ function Home() {
                 <div className="secondSection">
                     {!isMobile && !isTablet && <NameCard
                         name={t("common.drParthaPratimPaul")}
+                        image={parthaPortrait}
                         style={{
                             position: 'relative',
                             top: '70%',
@@ -87,6 +91,7 @@ function Home() {
                     />}
                     {!isMobile && !isTablet && <NameCard
                         name={t("common.drBanyaGhoshPaul")}
+                        image={banyaPortrait}
                         style={{
                             position: 'relative',
                             top: '51.4%',
@@ -104,7 +109,15 @@ function Home() {
                         backgroundColor: 'var(--color-brand-soft)',
                         top: isTablet ? '0' : '10%',
                         right: isTablet ? '0' : '5%'
-                    }} />
+                    }}>
+                        <img
+                            className="heroCaduceus"
+                            src={caduceus}
+                            alt=""
+                            aria-hidden="true"
+                            draggable={false}
+                        />
+                    </Shape>
                 )}
             </div>
         </>

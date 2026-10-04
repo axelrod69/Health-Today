@@ -1,5 +1,17 @@
 @import './shape.css';
 
+.heroCaduceus {
+   position: absolute;
+   top: 14%;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 80%;
+   height: 82%;
+   object-fit: contain;
+   pointer-events: none;
+   user-select: none;
+}
+
 .home {
    display: flex;
    width: 100%;

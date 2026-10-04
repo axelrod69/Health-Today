@@ -62,8 +62,13 @@
     margin: 0;
 }
 
-.footerBody>div:last-child>p {
+.footerBody>div:last-child>.studioAboutButton {
     margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    font-weight: inherit;
     color: var(--color-accent);
     cursor: pointer;
     font-size: 18px;
@@ -156,7 +161,7 @@
         font-size: 4vw;
     }
 
-    .footerBody>div:last-child>p {
+    .footerBody>div:last-child>.studioAboutButton {
         margin: 0;
         color: var(--color-accent);
         cursor: pointer;
@@ -181,4 +186,72 @@
         color: var(--color-accent);
         cursor: pointer;
     }
+}
+
+.studioAboutButton:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.studioDialog {
+    box-sizing: border-box;
+    width: min(440px, calc(100% - 32px));
+    max-height: calc(100dvh - 32px);
+    padding: 24px;
+    border: 1px solid var(--color-accent-muted);
+    border-radius: 20px;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    box-shadow: 0 18px 45px var(--color-shadow-overlay);
+    overflow: auto;
+    text-align: left;
+}
+
+.studioDialog::backdrop {
+    background-color: var(--color-overlay);
+}
+
+.studioDialogHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.studioDialogHeader h2 {
+    margin: 0;
+    color: var(--color-accent);
+    font-size: 22px;
+}
+
+.studioDialogClose {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--color-text);
+}
+
+.studioDialogClose:hover {
+    background-color: var(--color-hover-overlay);
+}
+
+.studioDialog p {
+    margin: 16px 0 0;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.studioDialog a {
+    color: var(--color-accent);
+    overflow-wrap: anywhere;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
