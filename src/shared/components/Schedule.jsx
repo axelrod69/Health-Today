@@ -2,7 +2,7 @@ import '../styles/schedule.css'
 import AddressCard from './AddressCard';
 import Calender from './Calender';
 import shonaliExterior from '../../assets/images/shonali-shibir-exterior.jpeg'
-import galaxyEntrance from '../../assets/images/maharaja-galaxy-entrance.jpeg'
+import galaxyBanyaConsultation from '../../assets/images/maharaja-galaxy-banya-consultation.jpeg'
 import galaxyReception from '../../assets/images/maharaja-galaxy-reception.jpeg'
 import galaxyConsultation from '../../assets/images/maharaja-galaxy-consultation.jpg'
 import milanExterior from '../../assets/images/milan-sangha-exterior.jpeg'
@@ -21,7 +21,7 @@ function Schedule() {
         milanExterior,
         milanInterior,
         milanConsultation,
-        galaxyEntrance,
+        galaxyBanyaConsultation,
         galaxyReception,
         galaxyConsultation,
         shonaliExterior,

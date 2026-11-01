@@ -1,11 +1,13 @@
 import '../styles/aboutUs.css'
 import '../styles/speciality.css'
 import PictureCard from './PictureCard';
+import parthaPhoto from '../../assets/images/about-partha.jpeg';
+import banyaPhoto from '../../assets/images/about-banya.jpg';
 import getScreenSize from '../hooks/useScreenSize'
 import { useLocalization } from '../../core/localization/LocalizationProvider';
 
 function AboutUs() {
-    const { isMobile, isTablet, isLaptop } = getScreenSize()
+    const { isMobile, isTablet } = getScreenSize()
     const { t } = useLocalization()
 
     const DoctorTestimonialsMobile = (
@@ -13,7 +15,7 @@ function AboutUs() {
             <div className='doctorTestimonials'>
                 <div>
                     <div>
-                        <PictureCard />
+                        <PictureCard image={parthaPhoto} alt={t("common.drParthaPratimPaul")} />
                         <h2>{t("common.drParthaPratimPaul")}</h2>
                     </div>
 
@@ -27,7 +29,7 @@ function AboutUs() {
                 </div>
                 <div>
                     <div>
-                        <PictureCard style={{}} />
+                        <PictureCard image={banyaPhoto} alt={t("common.drBanyaGhoshPaul")} objectPosition="35% center" />
                         <h2>{t("common.drBanyaGhoshPaul")}</h2>
                     </div>
 
@@ -57,7 +59,7 @@ function AboutUs() {
                 </div>
                 {(isMobile || isTablet) ? DoctorTestimonialsMobile : <div className='doctorTestimonials'>
                     <div>
-                        <PictureCard />
+                        <PictureCard image={parthaPhoto} alt={t("common.drParthaPratimPaul")} />
                         <div>
                             <h2>{t("common.drParthaPratimPaul")}</h2>
                             <p>{t("about.drParthaPratimPaulTestimonial")}</p>
@@ -69,7 +71,7 @@ function AboutUs() {
                         </div>
                     </div>
                     <div>
-                        <PictureCard style={{
+                        <PictureCard image={banyaPhoto} alt={t("common.drBanyaGhoshPaul")} objectPosition="35% center" style={{
                             marginLeft: "30px",
                             marginRight: "0"
                         }} />

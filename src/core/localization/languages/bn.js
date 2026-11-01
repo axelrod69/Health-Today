@@ -33,6 +33,9 @@ const bn = {
         forAppointment: "অ্যাপয়েন্টমেন্টের জন্য নিচের নম্বরে কল করুন:"
     },
     calender: {
+        banyaOpeningTime: "10:00 AM - 01:00 PM",
+        banyaClosingTime: "05:00 PM - 08:00 PM",
+        temporaryTimings: "অস্থায়ী সময়সূচি — নিশ্চিত করা বাকি",
         timings: "সময়সূচি",
         monday: "সোমবার",
         tuesday: "মঙ্গলবার",

@@ -1,4 +1,6 @@
 .pictureCard {
+    overflow: hidden;
+    flex-shrink: 0;
     height: 250px;
     width: 250px;
     margin: 0 30px;
@@ -16,4 +18,11 @@
         box-shadow: 5px 5px 20px grey;
         background-color: var(--color-brand-card);
     }
+}
+
+.pictureCard img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

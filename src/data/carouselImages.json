@@ -17,12 +17,12 @@
             ],
             "slideTwo": [
                 {
-                    "src": "galaxyEntrance",
-                    "alt": "Health Today chamber entrance at Maharaja Galaxy"
-                },
-                {
                     "src": "galaxyReception",
                     "alt": "Reception at the Maharaja Galaxy chamber"
+                },
+                {
+                    "src": "galaxyBanyaConsultation",
+                    "alt": "Dr. Banya Ghosh Paul consulting at the Maharaja Galaxy chamber"
                 },
                 {
                     "src": "galaxyConsultation",

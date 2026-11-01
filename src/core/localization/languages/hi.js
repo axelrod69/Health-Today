@@ -33,6 +33,9 @@ const hi = {
         forAppointment: "अपॉइंटमेंट के लिए नीचे दिए गए नंबर पर कॉल करें:"
     },
     calender: {
+        banyaOpeningTime: "10:00 AM - 01:00 PM",
+        banyaClosingTime: "05:00 PM - 08:00 PM",
+        temporaryTimings: "अस्थायी समय — पुष्टि बाकी है",
         timings: "समय",
         monday: "सोमवार",
         tuesday: "मंगलवार",

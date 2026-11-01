@@ -1,9 +1,11 @@
 import '../styles/pictureCard.css'
 
-function PictureCard({ image }) {
+function PictureCard({ image, alt = '', style, objectPosition = 'center' }) {
     return (
         <>
-            <div className='pictureCard'></div>
+            <div className='pictureCard' style={style}>
+                {image && <img src={image} alt={alt} style={{ objectPosition }} />}
+            </div>
         </>
     );
 }

@@ -33,6 +33,9 @@ const en = {
         "forAppointment": "For Appointment, Call on the below numbers:",
     },
     calender: {
+        banyaOpeningTime: "10:00 AM - 01:00 PM",
+        banyaClosingTime: "05:00 PM - 08:00 PM",
+        temporaryTimings: "Temporary timings — to be confirmed",
         timings: "Timings",
         monday: "Monday",
         tuesday: "Tuesday",

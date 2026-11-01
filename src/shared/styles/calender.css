@@ -4,12 +4,57 @@
     justify-content: center;
     align-items: center;
     /* height: 50%; */
-    height: 500px;
+    min-height: 500px;
+    height: auto;
+    padding-bottom: 16px;
     width: 70%;
     background-image: linear-gradient(to bottom, var(--color-gradient-soft), var(--color-gradient-strong));
     border-radius: 8%;
     box-shadow: 6px 6px 20px var(--color-shadow-calendar);
     margin-left: 20px;
+}
+
+.doctorTimingTabs {
+    display: flex;
+    gap: 6px;
+    width: 92%;
+    margin: 0 0 16px;
+    padding: 4px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background: var(--color-brand-soft);
+}
+
+.doctorTimingTabs button {
+    flex: 1;
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px 8px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--color-text);
+    font-size: clamp(12px, 1vw, 16px);
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.doctorTimingTabs button[aria-selected="true"] {
+    background: var(--color-primary);
+    color: var(--color-on-brand);
+}
+
+.doctorTimingTabs button:hover {
+    border-color: var(--color-primary);
+}
+
+.calenderDiv .timingsNotice {
+    width: 90%;
+    margin: 0 0 12px;
+    color: var(--color-text);
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
 }
 
 h2 {
@@ -116,7 +161,7 @@ h2 {
 @media (min-width: 374px) and (max-width: 767px) {
     .calenderDiv {
         margin-left: 0;
-        height: 120vw;
+        height: auto;
         width: 100%;
     }
 
@@ -152,7 +197,7 @@ h2 {
 @media (min-width: 768px) and (max-width: 1024px) {
     .calenderDiv {
         margin-left: 0;
-        height: 80vw;
+        height: auto;
         width: 100%;
     }
 
