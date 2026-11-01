@@ -10,7 +10,8 @@
     flex-direction: row;
     position: relative;
     width: 100%;
-    height: 920px;
+    min-height: 920px;
+    height: auto;
     /* background-image: linear-gradient(to bottom, rgba(214, 178, 237, 0.4), rgba(214, 178, 237, 0)); */
 }
 

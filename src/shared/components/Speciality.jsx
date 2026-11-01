@@ -1,12 +1,14 @@
 import '../styles/speciality.css'
 import ServicesCard from './ServicesCard'
 import Button from './Button';
-import getScreenSize from '../hooks/useScreenSize'
+import childCare from '../../assets/images/service-child-care-realistic.png'
+import physiotherapy from '../../assets/images/service-physiotherapy-realistic.png'
+import motherCare from '../../assets/images/service-mother-care-realistic.png'
+import mentalHealth from '../../assets/images/service-mental-health-realistic.png'
 import { useLocalization } from '../../core/localization/LocalizationProvider';
 
 
 function Speciality() {
-    const { isMobile, isTablet, isLaptop } = getScreenSize()
     const { t } = useLocalization()
 
     return (
@@ -19,10 +21,10 @@ function Speciality() {
                 </div>
                 <h2>{t("speciality.commonSpecialities")}</h2>
                 <div className='servicesFlex'>
-                    <ServicesCard serviceText={t("speciality.treatmentOne")} />
-                    <ServicesCard serviceText={t("speciality.treatmentTwo")} />
-                    <ServicesCard serviceText={t("speciality.treatmentThree")} />
-                    <ServicesCard serviceText={t("speciality.treatmentFour")} />
+                    <ServicesCard image={childCare} serviceText={t("speciality.treatmentOne")} />
+                    <ServicesCard image={physiotherapy} serviceText={t("speciality.treatmentTwo")} />
+                    <ServicesCard image={motherCare} serviceText={t("speciality.treatmentThree")} />
+                    <ServicesCard image={mentalHealth} serviceText={t("speciality.treatmentFour")} />
                 </div>
                 <div className='servicesDescription'>
                     <div className='firstDescriptionSection'>

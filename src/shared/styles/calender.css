@@ -30,7 +30,7 @@
     min-width: 0;
     min-height: 44px;
     padding: 10px 8px;
-    border: 1px solid transparent;
+    border: none;
     border-radius: 9px;
     background: transparent;
     color: var(--color-text);
@@ -44,8 +44,8 @@
     color: var(--color-on-brand);
 }
 
-.doctorTimingTabs button:hover {
-    border-color: var(--color-primary);
+.doctorTimingTabs button:focus:not(:focus-visible) {
+    outline: none;
 }
 
 .calenderDiv .timingsNotice {

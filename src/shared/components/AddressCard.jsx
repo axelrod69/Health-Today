@@ -38,6 +38,7 @@ function AddressCard({ slides = [], autoPlayMs = 3500, latitude, longitude, addr
 
     return (
         <>
+            <address className="chamberAddress">{address}</address>
             <div className="addressCard">
                 <div className='locationPin' onClick={() => showMapCard(true)}>
                     <LocationPin height={40} width={40} />
