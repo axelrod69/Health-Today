@@ -1,20 +1,40 @@
-import { createContext, useContext, useState, useMemo } from "react";
+import { createContext, useCallback, useContext, useState, useMemo } from "react";
 import en from "./languages/en";
 import hi from "./languages/hi";
 import bn from "./languages/bn";
 
 const translations = { en, hi, bn };
+const localeStorageKey = "health-today-language";
+
+function loadLocale() {
+  try {
+    const saved = localStorage.getItem(localeStorageKey);
+    if (Object.hasOwn(translations, saved)) return saved;
+  } catch {
+    // The site still works when browser storage is unavailable.
+  }
+  return "en";
+}
 
 const LocalizationContext = createContext();
 
 export const LocalizationProvider = ({ children }) => {
-  const [locale, setLocale] = useState("en");
+  const [locale, updateLocale] = useState(loadLocale);
+  const setLocale = useCallback((nextLocale) => {
+    if (!Object.hasOwn(translations, nextLocale)) return;
+    updateLocale(nextLocale);
+    try {
+      localStorage.setItem(localeStorageKey, nextLocale);
+    } catch {
+      // The selection still applies to the current page.
+    }
+  }, []);
 
   const getNestedValue = (obj, path) => {
     return path.split(".").reduce((acc, key) => acc?.[key], obj);
   };
 
-  const t = (key, params = {}) => {
+  const t = useCallback((key, params = {}) => {
     let value = getNestedValue(translations[locale], key) || key;
 
     Object.keys(params).forEach((param) => {
@@ -22,13 +42,13 @@ export const LocalizationProvider = ({ children }) => {
     });
 
     return value;
-  };
+  }, [locale]);
 
   const value = useMemo(() => ({
     locale,
     setLocale,
     t,
-  }), [locale]);
+  }), [locale, setLocale, t]);
 
   return (
     <LocalizationContext.Provider value={value}>

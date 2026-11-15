@@ -13,6 +13,16 @@ function Home() {
     const { isMobile, isTablet, isLaptop } = getScreenSize()
     const { t } = useLocalization()
 
+    const heroIcon = (
+        <img
+            className="heroCaduceus"
+            src={caduceus}
+            alt=""
+            aria-hidden="true"
+            draggable={false}
+        />
+    )
+
     const Content = (
         <>
             <div className='textBlock'>
@@ -75,7 +85,9 @@ function Home() {
                             // height: '80%',
                             // width: '80%',
                             backgroundColor: 'var(--color-brand-soft)'
-                        }} />
+                        }}>
+                            {heroIcon}
+                        </Shape>
                     }
                 </div>
                 <div className="secondSection">
@@ -110,13 +122,7 @@ function Home() {
                         top: isTablet ? '0' : '10%',
                         right: isTablet ? '0' : '5%'
                     }}>
-                        <img
-                            className="heroCaduceus"
-                            src={caduceus}
-                            alt=""
-                            aria-hidden="true"
-                            draggable={false}
-                        />
+                        {heroIcon}
                     </Shape>
                 )}
             </div>

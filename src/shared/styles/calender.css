@@ -146,6 +146,11 @@ h2 {
     color: var(--color-schedule-text);
 }
 
+.timings>div>div:last-child>div:first-child>div:only-child {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
 .timings>div>div:last-child>div:last-child {
     display: flex;
     justify-content: flex-start;

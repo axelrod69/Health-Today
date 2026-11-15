@@ -20,7 +20,6 @@ function NavBar() {
                     </div>
                 </div>
                 <ul>
-                    <li><a href="#home">{t("navBar.home")}</a></li>
                     <li>
                         <a href="#services">{t("navBar.services")}</a>
                     </li>

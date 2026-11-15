@@ -114,7 +114,16 @@ h2 {
     margin-bottom: 100px;
 }
 
-@media (min-width: 374px) and (max-width: 767px) {
+.buttonSection .aboutSectionLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0.6em 1.2em;
+    color: var(--color-text);
+}
+
+@media (max-width: 767px) {
     .specialityDiv {
         padding-left: 20px;
         padding-right: 20px;
@@ -145,16 +154,15 @@ h2 {
     }
 
     .servicesFlex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
         gap: 4vw;
         width: 100%;
         margin-top: 8vw;
         margin-bottom: 1vw;
-        flex-direction: row;
-        padding: 2vw;
+        box-sizing: border-box;
+        padding-inline: clamp(12px, 4vw, 24px);
     }
 
     .servicesDescription {

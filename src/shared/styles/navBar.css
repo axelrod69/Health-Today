@@ -113,8 +113,9 @@ html {
     box-sizing: border-box;
 }
 
-.dropDownContent li:hover {
+.navBar .dropDownContent li:hover {
     background-color: var(--color-accent-muted);
+    color: var(--color-on-brand);
 }
 
 .languageDropdown:hover .dropDownContent {

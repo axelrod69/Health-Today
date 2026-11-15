@@ -41,11 +41,18 @@
     text-underline-offset: 8px;
 }
 
-.footerBody>div:nth-child(2)>p {
+.footerQuickLink {
     margin: 0;
     color: var(--color-accent);
     cursor: pointer;
     font-size: 18px;
+    font-weight: 500;
+}
+
+.footerQuickLink:hover,
+.footerQuickLink:focus-visible {
+    color: var(--color-accent);
+    text-decoration: underline;
 }
 
 .footerBody>div:last-child {
@@ -76,20 +83,27 @@
 
 .footNote {
     display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    padding: 6px 12px;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     background-color: var(--color-brand-medium);
-    height: 30px;
+    min-height: 30px;
+    flex-shrink: 0;
     width: 100%;
     margin-top: auto;
 
 }
 
-.footNote>p {
+.footNote>a {
     font-size: 15px;
     font-weight: bold;
-    color: var(--color-accent);
+    color: var(--color-text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
     cursor: pointer;
 }
 
@@ -140,7 +154,7 @@
         font-size: 4vw;
     }
 
-    .footerBody>div:nth-child(2)>p {
+    .footerQuickLink {
         margin: 0;
         color: var(--color-accent);
         cursor: pointer;
@@ -172,19 +186,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
         background-color: var(--color-brand-medium);
-        height: 6vw;
         width: 100%;
         margin-top: 1vw;
     }
 
-    .footNote>p {
-        align-items: center;
-        font-size: 3.5vw;
-        font-weight: bold;
-        color: var(--color-accent);
-        cursor: pointer;
+    .footNote>a {
+        font-size: clamp(13px, 3.5vw, 15px);
     }
 }
 

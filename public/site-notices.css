@@ -1,0 +1,22 @@
+:root {
+    color-scheme: light;
+    font-family: system-ui, sans-serif;
+    color: #213547;
+    background: #f8f3fc;
+    line-height: 1.65;
+}
+
+body { margin: 0; }
+main {
+    max-width: 44rem;
+    margin: clamp(1rem, 5vw, 4rem) auto;
+    padding: clamp(1rem, 5vw, 3rem);
+    border-radius: 1rem;
+    background: white;
+}
+
+h1 { line-height: 1.2; }
+h2 { margin-top: 1.5rem; font-size: 1.2rem; }
+a { color: #6325b0; text-underline-offset: 0.2em; }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }

@@ -5,10 +5,12 @@
     grid-template-columns: 1fr 1fr;
     align-items: start;
     gap: clamp(16px, 3vw, 48px);
-    width: min(1200px, 92%);
+    width: min(530px, 92%);
     margin: 48px auto 80px;
-    transition: grid-template-columns var(--profile-duration) var(--profile-easing);
+    transition: width var(--profile-duration) var(--profile-easing), grid-template-columns var(--profile-duration) var(--profile-easing);
 }
+
+.doctorProfiles:not([data-selected="none"]) { width: min(1200px, 92%); }
 
 .doctorProfiles[data-selected="partha"] { grid-template-columns: 4fr 1fr; }
 .doctorProfiles[data-selected="banya"] { grid-template-columns: 1fr 4fr; }
@@ -27,7 +29,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
     width: 100%;
     min-width: 0;
     padding: 8px;
@@ -54,15 +55,29 @@
     aspect-ratio: 4 / 5;
 }
 
-.doctorProfileSelect h3 {
-    margin: 0;
-    font-size: clamp(16px, 1.6vw, 22px);
-    line-height: 1.4;
+.doctorProfileCaption {
+    display: grid;
+    grid-template-rows: 1fr;
     opacity: 1;
-    transition: opacity 300ms ease;
+    transition: opacity 300ms ease, grid-template-rows var(--profile-duration) var(--profile-easing);
 }
 
-.doctorProfile[data-expanded="true"] .doctorProfileSelect h3 { opacity: 0; }
+.doctorProfileCaptionInner {
+    min-height: 0;
+    overflow: hidden;
+}
+
+.doctorProfileName {
+    display: block;
+    margin-top: 16px;
+    font-size: clamp(16px, 1.6vw, 22px);
+    line-height: 1.4;
+}
+
+.doctorProfile[data-expanded="true"] .doctorProfileCaption {
+    grid-template-rows: 0fr;
+    opacity: 0;
+}
 
 .doctorProfileDetails {
     max-height: 0;
@@ -97,7 +112,23 @@
     text-align: left;
     color: var(--color-text);
 }
-.doctorProfileDetails .doctorProfileCredentials { color: var(--color-accent); font-weight: 600; }
+.doctorProfileCredentials {
+    display: grid;
+    gap: 4px;
+    margin-top: 8px;
+    font-size: clamp(12px, 1vw, 14px);
+    line-height: 1.4;
+    color: var(--color-accent);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.doctorProfileDetails .doctorProfileCredentials { margin-top: 12px; }
+
+@media (min-width: 1025px) {
+    .doctorProfiles[data-selected="none"] { width: min(620px, 92%); }
+    .doctorProfiles[data-selected="none"] .doctorProfileSelect img { width: min(100%, 244px); }
+}
 
 @media (max-width: 700px) {
     .doctorProfiles { gap: 12px; margin-top: 24px; }

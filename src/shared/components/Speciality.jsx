@@ -1,6 +1,6 @@
 import '../styles/speciality.css'
 import ServicesCard from './ServicesCard'
-import Button from './Button';
+import '../styles/button.css'
 import childCare from '../../assets/images/service-child-care-realistic.png'
 import physiotherapy from '../../assets/images/service-physiotherapy-realistic.png'
 import motherCare from '../../assets/images/service-mother-care-realistic.png'
@@ -36,7 +36,7 @@ function Speciality() {
                             <p>{t("speciality.aspectDescription")}</p>
                         </div>
                         <div className='buttonSection'>
-                            <Button label={t("common.moreAboutUs")} variant="outline" />
+                            <a className="buttonClass outline aboutSectionLink" href="#about">{t("common.moreAboutUs")}</a>
                         </div>
                     </div>
                 </div>

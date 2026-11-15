@@ -7,7 +7,8 @@ import { useRef } from 'react';
 
 function Footer() {
     const { isMobile } = getScreenSize()
-    const { t } = useLocalization()
+    const { t, locale } = useLocalization()
+    const noticeSuffix = locale === 'hi' || locale === 'bn' ? `.${locale}` : ''
     const studioDialog = useRef(null)
 
     const closeOnBackdrop = (event) => {
@@ -33,9 +34,10 @@ function Footer() {
                     </div>
                     <div>
                         <h2>{t("footer.quickLinks")}</h2>
-                        <p>{t("footer.ourServices")}</p>
-                        <p>{t("footer.appointment")}</p>
-                        <p>{t("common.aboutUs")}</p>
+                        <a className="footerQuickLink" href="#">{t("navBar.home")}</a>
+                        <a className="footerQuickLink" href="#services">{t("footer.ourServices")}</a>
+                        <a className="footerQuickLink" href="#schedule">{t("footer.appointment")}</a>
+                        <a className="footerQuickLink" href="#about">{t("common.aboutUs")}</a>
                     </div>
                     <div>
                         <h2>{t("footer.designedByAxelrodStudios")}</h2>
@@ -50,7 +52,8 @@ function Footer() {
                     </div>
                 </div>
                 <div className='footNote'>
-                    <p>{t("footer.privacyPolicy")}</p>
+                    <a href={`${import.meta.env.BASE_URL}privacy-policy${noticeSuffix}.html`}>{t("footer.privacyPolicy")}</a>
+                    <a href={`${import.meta.env.BASE_URL}terms-of-use${noticeSuffix}.html`}>{t("footer.termsOfUse")}</a>
                 </div>
             </div>
             <dialog

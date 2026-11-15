@@ -2,7 +2,7 @@ import '../styles/schedule.css'
 import AddressCard from './AddressCard';
 import Calender from './Calender';
 import shonaliExterior from '../../assets/images/shonali-shibir-exterior.jpeg'
-import galaxyBanyaConsultation from '../../assets/images/maharaja-galaxy-banya-consultation.jpeg'
+import galaxyStorefront from '../../assets/images/maharaja-galaxy-storefront.jpeg'
 import galaxyReception from '../../assets/images/maharaja-galaxy-reception.jpeg'
 import galaxyConsultation from '../../assets/images/maharaja-galaxy-consultation.jpg'
 import milanExterior from '../../assets/images/milan-sangha-exterior.jpeg'
@@ -21,7 +21,7 @@ function Schedule() {
         milanExterior,
         milanInterior,
         milanConsultation,
-        galaxyBanyaConsultation,
+        galaxyStorefront,
         galaxyReception,
         galaxyConsultation,
         shonaliExterior,
@@ -34,8 +34,8 @@ function Schedule() {
 
     const slidesRoot = carouselImages?.slides?.[0] ?? {}
     const groups = [
-        { key: 'slideOne', title: 'Slide One', slides: slidesRoot.slideOne ?? [], latitude: 22.643464807575757, longitude: 88.42530199591306, address: t("schedule.addressOne") },
-        { key: 'slideTwo', title: 'Slide Two', slides: slidesRoot.slideTwo ?? [], latitude: 22.643357899125526, longitude: 88.42439026561632, address: t("schedule.addressTwo") },
+        { key: 'slideOne', title: 'Slide One', slides: slidesRoot.slideOne ?? [], latitude: 22.643357899125526, longitude: 88.42439026561632, address: t("schedule.addressTwo") },
+        { key: 'slideTwo', title: 'Slide Two', slides: slidesRoot.slideTwo ?? [], latitude: 22.643464807575757, longitude: 88.42530199591306, address: t("schedule.addressOne") },
         { key: 'slideThree', title: 'Slide Three', slides: slidesRoot.slideThree ?? [], latitude: 22.643837, longitude: 88.427671, address: t("schedule.addressThree") },
     ].map((group) => ({
         ...group,
@@ -75,18 +75,18 @@ function Schedule() {
                 <div className='appointment'>
                     <p>{t("schedule.forAppointment")}</p>
                     <div className='numberDiv'>
-                        <NameCard name={t("common.drParthaPratimPaul")}
-                        image={parthaPortrait}
-                        phoneNumber={t("common.drParthaPratimPaulNo")} style={{
+                        <NameCard name={t("common.drBanyaGhoshPaul")}
+                        image={banyaPortrait}
+                        phoneNumber={t("common.drBanyaGhoshPaulNo")} style={{
                         height: isMobile ? 'auto' : isTablet ? '14vw' :  '120px',
                         width: 'auto',
                         // top: '40%',
                         // left: '21%',
                         zIndex: '100'
                     }}/>
-                        <NameCard name={t("common.drBanyaGhoshPaul")}
-                        image={banyaPortrait}
-                        phoneNumber={t("common.drBanyaGhoshPaulNo")} style={{
+                        <NameCard name={t("common.drParthaPratimPaul")}
+                        image={parthaPortrait}
+                        phoneNumber={t("common.drParthaPratimPaulNo")} style={{
                         height: isMobile ? 'auto' : isTablet ? '14vw' : '120px',
                         width: 'auto',
                         // top: '40%',

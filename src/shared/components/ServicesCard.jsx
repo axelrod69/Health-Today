@@ -14,8 +14,7 @@ function ServicesCard({ image, serviceText }) {
                     overflow: 'hidden',
                     flexShrink: 0,
                     height: isMobile ? '20vw' : isTablet ? '20vw' : '140px',
-                    width: isMobile ? '20vw' : isTablet ? '20vw' : '140px',
-                    margin: '8px'
+                    width: isMobile ? '20vw' : isTablet ? '20vw' : '140px'
                 }}>
                     {image && <img className="serviceCardImage" src={image} alt="" loading="lazy" />}
                 </Shape>

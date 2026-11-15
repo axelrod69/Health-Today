@@ -12,12 +12,16 @@ function Calender() {
     const { t } = useLocalization()
     const doctor = doctorTimings[selectedDoctor]
 
-    const timings = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].map(day => ({
-        key: day,
-        day: t(`calender.${day}`),
-        timeMorning: t(doctor.closedMorning.includes(day) ? 'calender.closed' : doctor.morning),
-        timeEvening: t(doctor.closedEvening.includes(day) ? 'calender.closed' : doctor.evening),
-    }))
+    const closed = selectedDoctor === 'banya' ? null : t('calender.closed')
+    const timings = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].map(day => {
+        const [morning, evening] = doctor.days[day] ?? doctor.weekday
+        return {
+            key: day,
+            day: t(`calender.${day}`),
+            timeMorning: morning ?? closed,
+            timeEvening: evening ?? closed,
+        }
+    })
 
     const handleTabKey = (event, id) => {
         let next
@@ -47,7 +51,6 @@ function Calender() {
                         </button>
                     ))}
                 </div>
-                {doctor.temporary && <p className="timingsNotice">{t('calender.temporaryTimings')}</p>}
                 <div className='timings' id="doctor-timings-panel" role="tabpanel"
                     aria-labelledby={`timings-tab-${selectedDoctor}`} tabIndex={0}>
                     {timings.map((value) => (
@@ -60,12 +63,8 @@ function Calender() {
                             </div>
                             <div>
                                 <div>
-                                    <div>
-                                        {value['timeMorning']}
-                                    </div>
-                                    <div>
-                                        {value['timeEvening']}
-                                    </div>
+                                    {value.timeMorning && <div>{value.timeMorning}</div>}
+                                    {value.timeEvening && <div>{value.timeEvening}</div>}
                                 </div>
                                 <div>
                                     <Clock height={isMobile ? 20 : 30} width={isMobile ? 20 : 30}/>

@@ -33,18 +33,33 @@ p {
     color: var(--color-text-card);
 }
 
-@media (min-width: 374px) and (max-width: 767px) {
+.serviceCard > .shapeDiv {
+    margin: 8px;
+}
+
+@media (max-width: 767px) {
     .serviceCard {
-        height: 38vw;
-        width: 38vw;
-        border-radius: 20px;
-        padding: 10px;
-        box-shadow: 0 4px 10px var(--color-shadow-card);
+        box-sizing: border-box;
+        justify-content: flex-start;
+        gap: 8px;
+        height: auto;
+        width: 100%;
+        min-width: 0;
+        padding: 12px 8px;
     }
 
-    p {
-        margin-top: 1vw;
-        font-weight: 500;
-        font-size: 4vw;
+    .serviceCard > .shapeDiv {
+        max-width: min(20vw, 100%);
+        max-height: 20vw;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .serviceCard > p {
+        width: 100%;
+        margin: 0;
+        font-size: clamp(14px, 4vw, 20px);
+        line-height: 1.35;
+        overflow-wrap: anywhere;
     }
 }
