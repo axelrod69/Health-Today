@@ -72,7 +72,7 @@ p {
    /* padding: 8px 0 8px 4px; */
 }
 
-@media (min-width: 374px) and (max-width: 767px) {
+@media (width < 768px) {
 
    .nameCardContainer {
       display: flex;
@@ -163,7 +163,7 @@ p {
    }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (768px <= width < 1025px) {
 
    .nameCardContainer {
       display: flex;

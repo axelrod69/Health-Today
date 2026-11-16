@@ -54,12 +54,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 1000px;
+    width: min(1000px, calc(100% - 32px));
     height: auto;
-    margin-top: 8px;
-    margin-right: 50px;
-    margin-bottom: 80px;
-    margin-left: 50px;
+    margin: 8px auto 80px;
 }
 
 .numberDiv {
@@ -72,189 +69,65 @@
     height: 100%;
 }
 
-@media (max-width: 399px) {
+@media (width < 1025px) {
     .scheduleDiv {
-        display: flex;
         flex-direction: column;
-        position: relative;
-        width: 32%;
-        height: auto;
-        /* background-image: linear-gradient(to bottom, rgba(214, 178, 237, 0.4), rgba(214, 178, 237, 0)); */
-    }
-
-    .secondScheduleDiv {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0;
-        flex: 1;
-        width: 100%;
-    }
-
-    .secondScheduleDiv>p {
-        text-align: center;
-        padding: 0;
-        font-size: 6vw;
-        font-weight: bold;
-        max-width: 100%;
-
-        width: 100%;
-        line-height: 1.8;
-    }
-
-    .secondParagraph {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 4vw 0;
-    }
-
-    .secondParagraph>p {
-        text-align: center;
-        max-width: 100%;
-        width: 100%;
-        font-size: 4vw;
-        color: var(--color-text-muted);
-    }
-
-    .appointment {
-        margin: 8vw 0;
-    }
-
-    .numberDiv {
-        gap: 3vw;
-    }
-}
-
-@media (min-width: 400px) and (max-width: 767px) {
-    .scheduleDiv {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        width: 35%;
-        height: auto;
-        /* background-image: linear-gradient(to bottom, rgba(214, 178, 237, 0.4), rgba(214, 178, 237, 0)); */
+        width: min(calc(100% - 32px), 720px);
+        min-height: 0;
     }
 
     .firstScheduleDiv {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex: 1;
-        height: 100%;
-        padding: 8vw 0;
+        padding: 24px 0 0;
     }
 
     .secondScheduleDiv {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        margin-top: 0;
-        flex: 1;
+    }
+
+    .secondScheduleDiv>p,
+    .secondParagraph>p {
         width: 100%;
+        max-width: none;
+        text-align: center;
     }
 
     .secondScheduleDiv>p {
-        text-align: center;
-        padding: 0;
-        font-size: 6vw;
-        font-weight: bold;
-        max-width: 100%;
-
-        width: 100%;
-        line-height: 1.8;
-    }
-
-    .secondParagraph {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 4vw 0;
+        font-size: clamp(20px, 4vw, 28px);
     }
 
     .secondParagraph>p {
-        text-align: center;
-        max-width: 100%;
-        width: 100%;
-        font-size: 4vw;
-        color: var(--color-text-muted);
+        font-size: clamp(14px, 3vw, 18px);
     }
 
     .appointment {
-        margin: 8vw 0;
+        margin: 32px auto;
+    }
+
+    .appointment>p {
+        width: 100%;
     }
 
     .numberDiv {
-        gap: 3vw;
+        gap: 16px;
+        flex-wrap: wrap;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .scheduleDiv {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        width: 70%;
-        height: auto;
-        /* background-image: linear-gradient(to bottom, rgba(214, 178, 237, 0.4), rgba(214, 178, 237, 0)); */
-    }
-
-    .firstScheduleDiv {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex: 1;
-        height: 100%;
-        padding: 8vw 0;
-    }
-
-    .secondScheduleDiv {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0;
-        flex: 1;
-        width: 100%;
-    }
-
-    .secondScheduleDiv>p {
-        text-align: center;
-        padding: 0;
-        font-size: 6vw;
-        font-weight: bold;
-        max-width: 100%;
-        width: 100%;
-        line-height: 1.2;
-    }
-
-    .secondParagraph {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 4vw 0;
-    }
-
-    .secondParagraph>p {
-        text-align: center;
-        max-width: 100%;
-        width: 100%;
-        font-size: 18px;
-        color: var(--color-text-muted);
-    }
-
-    .appointment {
-        margin: 8vw 0;
-    }
-
+@media (width < 768px) {
     .numberDiv {
-        gap: 3vw;
+        flex-direction: column;
+    }
+
+    .numberDiv .nameCard {
+        box-sizing: border-box;
+        min-width: min(100%, 260px);
+        max-width: 100%;
+        min-height: 76px;
+        padding: 12px;
+    }
+
+    .numberDiv .nameCardSecond {
+        align-items: center;
+        text-align: center;
     }
 }

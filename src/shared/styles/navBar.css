@@ -123,10 +123,11 @@ html {
 }
 
 /* @media only screen and (max-width: 600px) */
-@media (min-width: 374px) and (max-width: 767px) {
+@media (width < 768px) {
     .navBar {
         flex-direction: column;
-        height: 24vw;
+        height: auto;
+        gap: 8px;
         
     }
 
@@ -144,7 +145,7 @@ html {
         align-items: center;
         padding: 10px;
         color: var(--color-accent);
-        font-size: 4vw;
+        font-size: clamp(13px, 4vw, 18px);
         font-weight: 700;
         cursor: pointer;
     }
@@ -158,6 +159,7 @@ html {
     .navBar ul {
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         margin: 0;
         padding: 0;
 
@@ -169,7 +171,7 @@ html {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (768px <= width < 1025px) {
     .navBar {
         flex-direction: column;
         height: 24vw;

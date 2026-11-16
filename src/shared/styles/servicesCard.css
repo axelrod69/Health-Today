@@ -37,7 +37,7 @@ p {
     margin: 8px;
 }
 
-@media (max-width: 767px) {
+@media (width < 768px) {
     .serviceCard {
         box-sizing: border-box;
         justify-content: flex-start;

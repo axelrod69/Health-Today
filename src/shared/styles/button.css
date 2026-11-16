@@ -17,7 +17,7 @@
     border: 3px solid var(--color-primary);
 }
 
-@media (min-width: 374px) and (max-width: 769px) {
+@media (max-width: 769px) {
     .buttonClass {
         display: flex;
         justify-content: center;

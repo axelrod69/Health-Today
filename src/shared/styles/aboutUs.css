@@ -24,7 +24,7 @@
     justify-content: center;
     align-items: center;
     height: auto;
-    width: 1200px;
+    width: min(1200px, 100%);
     /* background-color: red; */
 }
 
@@ -123,7 +123,7 @@
     background-color: orange;
 } */
 
-@media (min-width: 374px) and (max-width: 1024px) {
+@media (width < 1025px) {
     .aboutUsDiv {
         display: flex;
         justify-content: center;

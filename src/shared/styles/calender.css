@@ -163,7 +163,37 @@ h2 {
     /* background-color: yellowgreen; */
 }
 
-@media (min-width: 374px) and (max-width: 767px) {
+@media (width < 768px) {
+    .timings>div {
+        box-sizing: border-box;
+        padding-inline: 10px;
+        gap: 8px;
+    }
+
+    .timings>div>div:first-child {
+        flex: 0 0 43%;
+        min-width: 0;
+    }
+
+    .timings>div>div:first-child>div:first-child {
+        flex: 0 0 auto;
+        margin-right: 6px;
+    }
+
+    .timings>div>div:first-child svg {
+        width: clamp(24px, 8vw, 40px);
+        height: auto;
+    }
+
+    .timings>div>div:last-child {
+        min-width: 0;
+    }
+
+    .timings>div>div:last-child>div:first-child {
+        min-width: 0;
+        text-align: center;
+    }
+
     .calenderDiv {
         margin-left: 0;
         height: auto;
@@ -186,20 +216,20 @@ h2 {
 
     .timings>div>div:last-child>div:first-child>div:first-child {
         flex: 1;
-        font-size: 2.7vw;
+        font-size: clamp(11px, 2.7vw, 16px);
         font-weight: bold;
         color: var(--color-schedule-text);
     }
 
     .timings>div>div:last-child>div:first-child>div:last-child {
         flex: 1;
-        font-size: 2.7vw;
+        font-size: clamp(11px, 2.7vw, 16px);
         font-weight: bold;
         color: var(--color-schedule-text);
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (768px <= width < 1025px) {
     .calenderDiv {
         margin-left: 0;
         height: auto;

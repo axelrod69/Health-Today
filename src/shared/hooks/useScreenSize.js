@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react"
 
-function checkScreenSize(width) {
-    if (width > 374 && width < 768) return "mobile"
-    if (width > 767 && width < 1025) return "tablet"
-    return "desktop"
-}
+const mobileQuery = "(width < 768px)"
+const tabletQuery = "(768px <= width < 1025px)"
 
-function getScreenSize() {
-    const [screen, setScreenSize] = useState(checkScreenSize(window.innerWidth))
+function useScreenSize() {
+    const [screen, setScreenSize] = useState(() => getScreenSize())
 
     useEffect(() => {
-        const handleIsResize = () => { setScreenSize(checkScreenSize(window.innerWidth)) }
-        window.addEventListener("resize", handleIsResize)
-        return () => window.removeEventListener("resize", handleIsResize)
+        const queries = [window.matchMedia(mobileQuery), window.matchMedia(tabletQuery)]
+        const update = () => setScreenSize(getScreenSize())
+        queries.forEach(query => query.addEventListener("change", update))
+        update()
+        return () => queries.forEach(query => query.removeEventListener("change", update))
     }, [])
 
     return {
@@ -23,4 +22,10 @@ function getScreenSize() {
     }
 }
 
-export default getScreenSize
+function getScreenSize() {
+    if (window.matchMedia(mobileQuery).matches) return "mobile"
+    if (window.matchMedia(tabletQuery).matches) return "tablet"
+    return "desktop"
+}
+
+export default useScreenSize

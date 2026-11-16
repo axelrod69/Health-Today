@@ -53,7 +53,7 @@
     margin: 0;
 }
 
-@media (min-width: 374px) and (max-width: 767px) {
+@media (width < 768px) {
     .nameCard p {
         color: var(--color-on-brand);
         text-align: start;
@@ -65,7 +65,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) { 
+@media (768px <= width < 1025px) {
     .nameCard p {
         color: var(--color-on-brand);
         text-align: start;
