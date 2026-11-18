@@ -52,8 +52,8 @@ const en = {
     },
     about: {
         aboutDescription: "Health Today brings together Dr. Partha Pratim Paul and Dr. Banya Ghosh Paul for consultations at our chambers in Dum Dum and Italgacha, Kolkata. Get to know our doctors below, explore our services and find the chamber most convenient for your visit.",
-        drParthaPratimPaulTestimonial: "Meet Dr. Partha Pratim Paul, a physician at Health Today. For a first consultation or a follow-up visit, bring your previous prescriptions and any relevant reports so you can discuss your health concerns. Use his schedule and contact number to plan an appointment.",
-        drBanyaGhoshPaulTestimonial: "Meet Dr. Banya Ghosh Paul, a physician at Health Today. If you have questions about your symptoms or an ongoing health concern, contact the chamber to arrange a consultation. Bring any previous prescriptions and relevant reports, and confirm her availability before visiting."
+        drParthaPratimPaulTestimonial: "Practice experience: 20 years. Meet Dr. Partha Pratim Paul, a physician at Health Today. For a first consultation or a follow-up visit, bring your previous prescriptions and any relevant reports so you can discuss your health concerns. Use his schedule and contact number to plan an appointment.",
+        drBanyaGhoshPaulTestimonial: "Practice experience: 20 years. Meet Dr. Banya Ghosh Paul, a physician at Health Today. If you have questions about your symptoms or an ongoing health concern, contact the chamber to arrange a consultation. Bring any previous prescriptions and relevant reports, and confirm her availability before visiting."
     },
     footer: {
         quickLinks: "Quick Links",

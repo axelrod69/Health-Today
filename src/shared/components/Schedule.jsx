@@ -2,6 +2,8 @@ import '../styles/schedule.css'
 import AddressCard from './AddressCard';
 import Calender from './Calender';
 import shonaliExterior from '../../assets/images/shonali-shibir-exterior.jpeg'
+import shonaliBanya from '../../assets/images/shonali-shibir-banya.jpeg'
+import shonaliConsultation from '../../assets/images/shonali-shibir-consultation.jpg'
 import galaxyStorefront from '../../assets/images/maharaja-galaxy-storefront.jpeg'
 import galaxyReception from '../../assets/images/maharaja-galaxy-reception.jpeg'
 import galaxyConsultation from '../../assets/images/maharaja-galaxy-consultation.jpg'
@@ -25,6 +27,8 @@ function Schedule() {
         galaxyReception,
         galaxyConsultation,
         shonaliExterior,
+        shonaliBanya,
+        shonaliConsultation,
     }
 
     const { isMobile, isTablet } = getScreenSize()

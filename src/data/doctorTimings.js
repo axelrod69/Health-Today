@@ -2,10 +2,10 @@
 export const doctorTimings = {
     partha: {
         name: 'common.drParthaPratimPaul',
-        weekday: ['09:00 AM - 02:30 PM', '06:30 PM - 10:00 PM'],
+        weekday: ['09:00 AM - 02:00 PM', '06:30 PM - 10:00 PM'],
         days: {
             saturday: [null, '05:00 PM - 10:00 PM'],
-            sunday: ['09:00 AM - 02:30 PM', null],
+            sunday: ['09:00 AM - 02:00 PM', null],
         },
     },
     banya: {
